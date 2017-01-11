@@ -1,2 +1,3 @@
 \contentsline {chapter}{\numberline {1}Unique Factorization}{3}
+\contentsline {section}{\numberline {1.1}Unique Factorization in $\mathbb {Z}$}{5}
 \contentsfinish 
