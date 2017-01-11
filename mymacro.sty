@@ -1,0 +1,52 @@
+\NeedsTeXFormat{LaTeX2e}[1995/12/01]
+\ProvidesPackage{mymacro}[2016/12/21 my macro package]
+
+% Macro
+\providecommand*{\lvec}[2][n]{\ensuremath{#2_1+#2_2+\ldots+#2_{#1}}}
+\providecommand*{\xvec}{\ensuremath{x_1,x_2,\ldots,x_n}}
+\providecommand*{\alphavec}{\ensuremath{\alpha_1,\alpha_2,\ldots,\alpha_n}}
+\providecommand*{\betavec}{\ensuremath{\beta_1,\beta_2,\ldots,\beta_n}}
+\providecommand*{\LB}[1][3]{\linebreak[#1]}
+
+\providecommand*{\al}{\ensuremath{\alpha}}
+\providecommand*{\be}{\ensuremath{\beta}}
+\providecommand*{\e}{\ensuremath{\varepsilon}}
+\providecommand*{\R}{\ensuremath{\mathbb{R}}}
+\providecommand*{\C}{\ensuremath{\mathbb{C}}}
+\providecommand*{\F}{\ensuremath{\mathbb{F}}}
+\providecommand*{\N}{\ensuremath{\mathbb{N}}}
+\providecommand*{\Q}{\ensuremath{\mathbb{Q}}}
+\providecommand*{\B}{\ensuremath{\mathcal{B}}}
+\providecommand*{\L}{\ensuremath{\mathcal{L}}}
+
+\providecommand*{\set}[1]{\{#1\}}
+\providecommand*{\abs}[1]{\|#1\|}
+\providecommand*{\f}[2]{\ensuremath{\frac{#1}{#2}}}
+\providecommand*{\dotp}[2]{\ensuremath{\left\langle#1,\,#2\right\rangle}}
+\providecommand*{\at}[1]{\Big|_{#1}}
+\providecommand*{\implies}{\ensuremath{\Longrightarrow}}
+\providecommand*{\eq}[1]{\begin{align*}#1\end{align*}}
+
+\providecommand*{\st}[1][{}]{\ensuremath{\sin{#1\theta}}}
+\providecommand*{\ct}[1][{}]{\ensuremath{\cos{{#1}\theta}}}
+
+\providecommand*{\Dif}[2]{\ensuremath{\frac{\mathrm{d}#1}{\mathrm{d}#2}}}
+\providecommand*{\DDif}[2]{\ensuremath{\frac{\mathrm{d}^{2}#1}{\,\,\mathrm{d}#2^{2}}}}
+\providecommand*{\pDif}[2]{\ensuremath{\frac{\partial#1}{\,\,\partial#2}}}
+\providecommand*{\pDDif}[2]{\ensuremath{\frac{\partial^2#1}{\,\,\partial#2^2}}}
+
+\providecommand*{\mbyn}{\ensuremath{m\times n}}
+\providecommand*{\vs}{vector space\ }
+\providecommand*{\fdvs}{finite dimensional vector space\ }
+
+\providecommand*{\de}{\ensuremath{^{\circ}\mathrm{C}}}
+
+\providecommand*{\rank}[1]{\ensuremath{\mathrm{rank}\,{#1}}}
+\providecommand*{\nullity}[1]{\ensuremath{\mathrm{nullity}\,{#1}}}
+\providecommand*{\ran}[1]{\ensuremath{\mathrm{ran}\,{#1}}}
+\providecommand*{\sgn}[1]{\ensuremath{\mathrm{sgn}\,{#1}}}
+\providecommand*{\curl}[1]{\ensuremath{\nabla\!\times\!#1}}
+\providecommand*{\grad}[1]{\ensuremath{\nabla\!#1}}
+\providecommand*{\divergent}[1]{\ensuremath{\nabla\!\cdot\!#1}}
+\providecommand*{\mat}[1]{\ensuremath{\mathrm{Mat}\,#1}}
+
