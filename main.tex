@@ -2,6 +2,7 @@
 \usepackage{mymacro}
 \begin{document}\tableofcontents
 \chapter{Unique Factorization}
+\section{Class Notes 17-01-12}
 For us, ring means commutative ring with identity.
 \begin{definition}
 A \emph{ring} is a set with two binary operations $(+,\cdot)$ satisfying
@@ -186,4 +187,88 @@ If $p$ is a prime and $p|bc$, then either $p|b$ or $p|c$.
 \begin{corollary}
 Suppose that $p$ is a prime and that $a,b\in\mathbb{Z}$. Then $\mbox{ord}_pab=\mbox{ord}_pa+\mbox{ord}_pb.$
 \end{corollary}
+\section{Class Notes 17-01-12}
+\begin{definition}
+A non-zero element in \R{} is called a unit if $\exists\, v\in \R$ such that $uv=1_\R$.
+\end{definition}
+\begin{definition}
+Two element $a,b \in\R$ are said to be associative if $\exists\, a\in\R$ such that $a=bu$, denoted by $a\sim b$.
+\end{definition}
+\begin{definition}
+A non-zero element $\pi$ in \R{} is said to be irreducible if $\pi$ is not a unit and if $a|\pi\Rightarrow$ $a$ is a unit or $a$ is associative of $\pi$.
+\end{definition}
+\begin{definition}
+A non-zero element in $\R$ is said to be prime if $\pi$ is not a unit and $\pi| ab\Rightarrow \pi|a$ or $\pi|b$, $\forall a,b\in\R.$
+\end{definition}
+\begin{proposition}
+If $\pi$ is a prime, then $\pi$ is irreducible.
+\end{proposition}
+\begin{proof}
+Let $\pi$ be a prime, suppose $a|\pi$, then $\pi=ab$ for some $b\in\R$. Thus $\pi|ab$ and by definition, $\pi|a$ or $\pi|b$.
+\begin{itemize}
+\item If $\pi|a$, then $a\sim \pi$.
+\item If $\pi|b$, then $a\sim 1$.
+\end{itemize}
+\end{proof}
+\begin{remark}
+A irreducible is not necessary to be a prime.\\
+Let $R = \Z[\sqrt{5}] = \{a+b\sqrt{-5}\ |\ a,b\in\Z\}\subset \C$. We have $$6=2\cdot3 = (1+\sqrt{-5})\cdot(1-\sqrt{-5}).$$We write $\pi = (1+\sqrt{-5})$ and claim that $2,3,\pi,\overline{\pi}$ are irreducibles but none of them are associative of each other.\\
+We define the norm function $N:R\rightarrow \Z$, where $N(\al)=\al\overline{\al}$, i.e., if $\al = a+bi$, then $N(\al)=a^2+5b^2$. We notice that 
+\begin{itemize}
+\item If $\al>0$, then $N(\al)>0$.
+\item $N(\al\be)=N(\al)N(\be)$.
+\end{itemize}
+\underline{Check: $2$ is irreducible:}\\
+\underline{Find unit:} \\$N(uv) = N(1) = 1 = N(u)N(v) \Rightarrow N(u)=N(v) = 1$. But $a^2+5b^2 = 1\Rightarrow a=\pm1, b=0$.\\Suppose $2=\al\be$, then $4=N(2) = N(\al\be) = N(\al)N(\be)$.
+\begin{enumerate}
+\item If $N(\al) = 1, N(\be) = 4$\\
+Then $\al$ is a unit $\Rightarrow$ $2$ is irreducible.
+\item If $N(\al) = 2, N(\be) = 2$\\
+Then $a^2+5b^2 = 2$ has no solution.
+\end{enumerate}
+\end{remark}
+\begin{definition}
+UFD(Unique Factorization Domain) is an integral domain $R$ in which every non-zero element(up to unit) factors uniquely into a product of irreducibles.
+\end{definition}
+\begin{proposition}
+Let $R$ be a domain in which factorization (of irreducibles) exists. Then \emph{$R$ is a UFD $\Leftrightarrow$ every irreducible in $R$ is prime.}
+\end{proposition}
+\begin{proof}\mbox{}\\
+$``\Leftarrow":$ Let $a$ be an element of $R$ and $a\ne0$. If $a=\pi_1\pi_2\cdots\pi_n=\sigma_1\sigma_2\cdots\sigma_m$ are two factorizations. Since $\pi_1$ is prime, $\pi_1|\sigma_i$ for some $i$. By rearranging, we may assume $\pi_1|\sigma_1$, Thus $\pi_1\sim \sigma_1$. Repeating this process, we can conclude that the two factorizations are the same.
+\notcomplete
+\end{proof}
+\begin{remark}
+There are clearly rings such that no factorization exists. For example, consider the ring $\Z[2^{1/2},2^{1/4},2^{1/8},\ldots]\subset \R$. It's the smallest subring of $\R$ that contains $2^{1/2},2^{1/4},\ldots$.
+\end{remark}
+\begin{definition}
+A ring $R$ is said to be noetherian if it satisfies any of the following equivalent conditions:
+\begin{enumerate}
+\item Any ascending chain of ideals in $R$ terminates.\\
+Namely, $I_1\subset I_2\subset I_3\subset \cdots\Rightarrow I_n = I_{n+1}=\cdots$ for some $n$.
+\item Any ideal $I$ in $R$ is finite generated.\\
+Namely, $I=(a_1,\ldots,a_n)$ for some $n$.
+\end{enumerate}
+\end{definition}
+\begin{proof}
+\mbox{}\\\mbox{``1.\ $\Rightarrow$2.\ ": } Let $I$ be an ideal, if $I\ne0$, pick $a_1\in I, a_1\neq 0$, clearly $(a_1)\subset I$. 
+If $(a_1)=I$, we are done, If not,
+$\exists a_2\in I\backslash(a_1)\Rightarrow (a_1,a_2)\subset I $, this chain terminates.\\
+\mbox{``1.\ $\Leftarrow$2.\ ": }Suppose $I_1\subset I_2\subset \ldots$ be an ascending ideal. Let $I = \cup I_n$, we claim that $I$ is an ideal.\\
+Let $a,b\in I_1$. Then there exists $n$ such that $a,b\in I_n$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \end{document}
