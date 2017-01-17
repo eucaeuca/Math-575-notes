@@ -141,10 +141,10 @@ with zero elt $(0+I)$ and identity elt $(1+I)$.
 \section{Unique Factorization in $\mathbb{Z}$}
 It will be more convenient to work with $\mathbb{Z}$ rather than restricting ourselves to the positive integers. The notion of divisibility carries over with no difficulty to $\mathbb{Z}$. If $p$ is a positive prime, $-p$ will also be a prime. We shall not consider $1$ or $-1$ as primes even though they fit the definition. This is simply a useful convention. They are called the units of $\mathbb{Z}$.\\There are a number of simple properties of division that we shall simply list.
 \begin{enumerate}
-\item $a|a,a\neq0$.
-\item If $a|b$ and $b|a$, then $a=\pm b$.
-\item If $a|b$ and $b|c$, then $a|c$.
-\item If $a|b$ and $a|c$, then $a|(b+c)$.
+\item $a\mid a,a\neq0$.
+\item If $a\mid b$ and $b\mid a$, then $a=\pm b$.
+\item If $a\mid b$ and $b\mid c$, then $a\mid c$.
+\item If $a\mid b$ and $a\mid c$, then $a\mid (b+c)$.
 \end{enumerate}
 \begin{lemma}
 Every nonzero integer can be written as a product of primes.
@@ -179,15 +179,15 @@ We say that two integers $a$ and $b$ are relatively prime if the only common div
 \end{definition}
 It's fairly standard to use the notation $(a, b)$ for the greatest common divisor of $a$ and $b$. With this convention we can say that $a$ and $b$ are relatively prime if $(a,b)=1$.
 \begin{proposition}
-Suppose that $a|bc$ and that $(a,b)=1$. Then $a|c$.
+Suppose that $a\mid bc$ and that $(a,b)=1$. Then $a\mid c$.
 \end{proposition}
 \begin{corollary}
-If $p$ is a prime and $p|bc$, then either $p|b$ or $p|c$.
+If $p$ is a prime and $p\mid bc$, then either $p\mid b$ or $p\mid c$.
 \end{corollary}
 \begin{corollary}
 Suppose that $p$ is a prime and that $a,b\in\mathbb{Z}$. Then $\mbox{ord}_pab=\mbox{ord}_pa+\mbox{ord}_pb.$
 \end{corollary}
-\section{Class Notes 17-01-12}
+\section{Class Notes 17-01-12}\label{PIDUFD}
 \begin{definition}
 A non-zero element in \R{} is called a unit if $\exists\, v\in \R$ such that $uv=1_\R$.
 \end{definition}
@@ -195,24 +195,24 @@ A non-zero element in \R{} is called a unit if $\exists\, v\in \R$ such that $uv
 Two element $a,b \in\R$ are said to be associative if $\exists\, a\in\R$ such that $a=bu$, denoted by $a\sim b$.
 \end{definition}
 \begin{definition}
-A non-zero element $\pi$ in \R{} is said to be irreducible if $\pi$ is not a unit and if $a|\pi\Rightarrow$ $a$ is a unit or $a$ is associative of $\pi$.
+A non-zero element $\pi$ in \R{} is said to be irreducible if $\pi$ is not a unit and if $a\mid \pi\Rightarrow$ $a$ is a unit or $a$ is associative of $\pi$.
 \end{definition}
 \begin{definition}
-A non-zero element in $\R$ is said to be prime if $\pi$ is not a unit and $\pi| ab\Rightarrow \pi|a$ or $\pi|b$, $\forall a,b\in\R.$
+A non-zero element in $\R$ is said to be prime if $\pi$ is not a unit and $\pi\mid  ab\Rightarrow \pi\mid a$ or $\pi\mid b$, $\forall a,b\in\R.$
 \end{definition}
 \begin{proposition}
 If $\pi$ is a prime, then $\pi$ is irreducible.
 \end{proposition}
 \begin{proof}
-Let $\pi$ be a prime, suppose $a|\pi$, then $\pi=ab$ for some $b\in\R$. Thus $\pi|ab$ and by definition, $\pi|a$ or $\pi|b$.
+Let $\pi$ be a prime, suppose $a\mid \pi$, then $\pi=ab$ for some $b\in\R$. Thus $\pi\mid ab$ and by definition, $\pi\mid a$ or $\pi\mid b$.
 \begin{itemize}
-\item If $\pi|a$, then $a\sim \pi$.
-\item If $\pi|b$, then $a\sim 1$.
+\item If $\pi\mid a$, then $a\sim \pi$.
+\item If $\pi\mid b$, then $a\sim 1$.
 \end{itemize}
 \end{proof}
 \begin{remark}
 A irreducible is not necessary to be a prime.\\
-Let $R = \Z[\sqrt{5}] = \{a+b\sqrt{-5}\ |\ a,b\in\Z\}\subset \C$. We have $$6=2\cdot3 = (1+\sqrt{-5})\cdot(1-\sqrt{-5}).$$We write $\pi = (1+\sqrt{-5})$ and claim that $2,3,\pi,\overline{\pi}$ are irreducibles but none of them are associative of each other.\\
+Let $R = \Z[\sqrt{5}] = \{a+b\sqrt{-5}\ \mid \ a,b\in\Z\}\subset \C$. We have $$6=2\cdot3 = (1+\sqrt{-5})\cdot(1-\sqrt{-5}).$$We write $\pi = (1+\sqrt{-5})$ and claim that $2,3,\pi,\overline{\pi}$ are irreducibles but none of them are associative of each other.\\
 We define the norm function $N:R\rightarrow \Z$, where $N(\al)=\al\overline{\al}$, i.e., if $\al = a+bi$, then $N(\al)=a^2+5b^2$. We notice that 
 \begin{itemize}
 \item If $\al>0$, then $N(\al)>0$.
@@ -234,7 +234,7 @@ An UFD (Unique Factorization Domain) is an integral domain $R$ in which every no
 Let $R$ be a domain in which factorization (of irreducibles) exists. Then \emph{$R$ is a UFD $\Leftrightarrow$ every irreducible in $R$ is prime.}
 \end{proposition}
 \begin{proof}\mbox{}\\
-$``\Leftarrow":$ Let $a$ be an element of $R$ and $a\ne0$. If $a=\pi_1\pi_2\cdots\pi_n=\sigma_1\sigma_2\cdots\sigma_m$ are two factorizations. Since $\pi_1$ is prime, $\pi_1|\sigma_i$ for some $i$. By rearranging, we may assume $\pi_1|\sigma_1$, Thus $\pi_1\sim \sigma_1$. Repeating this process, we can conclude that the two factorizations are the same.
+$``\Leftarrow":$ Let $a$ be an element of $R$ and $a\ne0$. If $a=\pi_1\pi_2\cdots\pi_n=\sigma_1\sigma_2\cdots\sigma_m$ are two factorizations. Since $\pi_1$ is prime, $\pi_1\mid \sigma_i$ for some $i$. By rearranging, we may assume $\pi_1\mid \sigma_1$, Thus $\pi_1\sim \sigma_1$. Repeating this process, we can conclude that the two factorizations are the same.
 \notcomplete
 \end{proof}
 \begin{remark}
@@ -271,13 +271,151 @@ Every PID is a UFD.
 \begin{proof}
 Let $R$ be a PID, then it's noetherian. So factorizations exist. So it suffices to show that every irreducible is a prime. Let $\pi$ be a irreducible in $R$. Suppose $\pi\mid ab$ and $a$ is not divided by $\pi$. We look at $I=(a,\pi)$, there exists $c\in R$, such that $I=(c)$. Thus we have $c\mid \pi, c\mid a$. So $c\sim 1$ or $c\sim \pi$. Since $c$ is not associative of $\pi$, $c$ is associative of $1$. But then $$1=ax+\pi y$$ for some $x,y\in R$. So $b=abx+\pi by$ or $\pi\mid b$.
 \end{proof}
-
-
-
-
-
-
-
-
-
+\section{Class Notes 17-01-17}
+\begin{example}
+\Z{} is a PID.
+\end{example}
+\begin{remark}
+Any ideal $I\subset\Z$ is of the form of $n\Z$.
+\end{remark}
+\begin{proof}
+$\forall I\subset \Z$, if $I=(0)$, we are done. If $I$ is not zero ideal, let $n$ be the smallest positive element in $I$. We claim: $I=n\Z$. Let $b\in I$, then $b=nq+r$, where $0\leq r<n$. But $r=b-nq\implies r\in I\implies r=0$. Therefore $b= nq$. 
+\end{proof}
+If $K$ is a field, let $R = k[x] = \mbox{polynomial in variable $x$ over the field $K$}$. What are the units in $R$? For arbitrary $f(x),g(x)\in K[x]$, if $f(x)g(x)=1$, we claim that $f(x), g(x)$ must be constant polynomial. For if we write $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots$, $g(x)=b_mx^m+b_{m-1}x^{m-1}+\cdots$. Then $f(x)g(x) = a_nb_m x^{m+n}+\cdots$. Since $a_n\ne0,b_m\ne0$ and \emph{$K$ is an integral domain}, we have $a_nb_m\ne0$. Therefore $$\deg{f(x)g(x)} = \deg{f(x)}+\deg{g(x)}.$$ We then apply this conclusion to $f(x)g(x) = 1$ and get $\deg{f(x)}\deg{g(x)} = \deg{1} = 0$, thus $f(x), g(x)$ must be constant.
+\begin{remark}
+Whether a polynomial is irreducible depends on the field. For example, if $x^2+1\in \R[x]$, then it's irreducible (why?). But if $x^2+1\in \C[x]$, then it's reducible (why?).
+\end{remark}
+\underline{Division Algorithm:} Let $f(x), g(x)\in K[x], g(x)\ne 0$, then there exists $q(x),r(x)\in K[x]$, such that $$f(x)=g(x)q(x)+r(x),$$where $r(x)=0$ or $0\leq\deg{r(x)}<\deg{g(x)}$. \\
+Using this fact, we have the following theorem.
+\begin{theorem}\label{kxpid}
+$K[x]$ is a PID.
+\end{theorem}
+\begin{proof}
+For all ideal $I\in K[x]$, if $I=(0)$, we are done. If $I\ne(0)$, let $g(x)\in I$ be the polynomial of least degree, let $f(x)\in I$, then $$f(x)=g(x)q(x)+r$$with $r=0$ or $0\leq\deg{r(x)}<\deg{g(x)}$ by division algorithm. But then $r(x)=0$, for otherwise $r(x)$ will be a polynomial whose degree is less than $g(x)$. Therefore $f(x)=g(x)q(x)$, $f(x)\in (g(x))$.
+\end{proof}
+\begin{definition}
+A domain $R$ is said to be an Euclidean domain if there exists a function $\lambda: \R\setminus\{0\}\rightarrow\Z^{\ge0}$, such that given $a,b\in R, b\ne0$, there exist $q,r\in R$ such that $a=qb+r$ and either $r=0$ or $0\le\lambda(r)<\lambda(b)$.
+\end{definition}
+\begin{example}
+$R=\Z[i]$ is an Euclidean domain.
+\end{example}
+\begin{proof}
+Let $N(\al)=\al\overline{\al} = a^2+b^2$ (if $\al = a+bi$). Let $\al,\be\in R$, $\be\ne0$, we have
+$$\frac{\al}{\be} = \frac{a+bi}{c+di} = \frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}i = r+si. (r,s\in\Q)$$Let $m+ni\in\Z[i]$ be the closest element to $r+si$. We denote $r'=r-m,s'=s-n$, then $\frac{\al}{\be} = r+si = m+ni+r'+s'i$, or 
+$$\al = \be(m+ni)+\be(r'+s'i),$$where $(m+ni)\in\Z[i]$ and $\be(r'+s'i)\in\Z[i]$, we remain to show that $N(\be(r'+s'i))<N(\be)$. This is the case because 
+\begin{align*}
+N(\be(r'+s'i))&= N(\be)N(r'+s'i)\\&\leq N(\be)(\frac{1}{4}+\frac{1}{4})\\&<N(\be)
+\end{align*} We are done.
+\end{proof}
+The Natural question is what are the units in $\Z[i]$? Does a prime in \Z{} still a prime in $Z[i]$? To answer the first question, we assume $u$ is a unit in $\Z[i]$. Then by definition there exists some $v$ such that $uv= 1$. But then $1=N(1) = N(uv) = N(u)N(v)\implies N(u) = 1$. Thus the only possible values of $u$ is $\pm1,\pm i$. We also check they are actually units. Now, to answer the second question, we try some small cases. We look at $5,7,11$ and $13$.
+\begin{example}
+If $5=ab$, $a,b\in \Z[i]$, then $25=N(5) = N(ab) = N(a)N(b)\implies N(a) = 5$. So $a$ can only be $\pm1\pm2i$ or $\pm2\pm i$. We try by hand and find $5= (2+i)(2-i)$ is a factorization, so $5$ is not a prime. 
+\end{example} 
+\begin{example}
+If $7=ab$, $a,b\in \Z[i]$, then $49=N(5) = N(ab) = N(a)N(b)\implies N(a) = 7$. We try by hand and find no factorization, so $7$ is a prime.
+\end{example}
+Use the same method, we find $5,13$ are not prime while $7,11$ are prime.
+\begin{remark}\mbox{}Obervation:\\
+\begin{enumerate}
+	\item If $p\con{1}{4}$, then $p = \pi\overline{\pi}$, where $\pi$ is a irreducible.
+	\item If $p\con{3}{4}$, then $p$ remains prime.
+	\item If $p=2$, $2=(1+i)(1-i) = (-i)(1+i)^2$ (ramification).
+\end{enumerate}
+\end{remark}
+\begin{remark}
+Let $R = \Z[\omega]$, where $\omega$ is a primitive cube root of $1$, then $R$ is a Euclidean domain.
+\end{remark}
+\section{Unique Factorization in $k[x]$}
+In this section we consier the ring $k[x]$ of polynomials with coefficients in a field $k$. If $f,g\in k[x]$, we say that $f$ divides $g$ if there is an $h\in k[x]$ such that $g= fh$.\\
+If $\deg{f}$ denotes the degree of $f$, we have $\deg{fg}= \deg{f}+\deg{g}$ (why? Because a field $k$ is necessarily an integral domain). nonzeros constants are the units of $k[x]$. A nonconstant polynomial $p$ is said to be irreducible if $q\mid p\implies$ $q$ is either a constant or a constant times $p$.
+\begin{lemma}\label{l1}
+Every nonconstant polynomial is the product of irreducible polynomials.
+\end{lemma}
+\begin{proof}
+Simply by induction.
+\end{proof}
+\begin{definition}
+A polynomial $f$ is called monic if its leading coefficient is $1$.
+\end{definition}
+\begin{definition}
+Let $p$ be a monic irreducibe polynomial. We define $\ord{p}{f}$ to be the integer $a$ defined by the property that $p^a\mid f$ but that $p^{a+1}\nmid f$.
+\end{definition}
+\begin{remark}
+$\ord{p}{f} = 0$ iff $p\nmid f$.
+\end{remark}
+\begin{theorem}
+Let $f\in k[x]$. Then we can write$$f= c\prod_pp^{a(p)},$$ where the product is over all monic irreducible polynomials and $c$ is a constant. The constant $c$ and the exponents $a(p)$ are uniquely determined by $f$; in fact, $a(p)= \ord{p}{f}$.
+\end{theorem}
+The existence of such a product follows immediately from Lemma \ref{l1}. The uniqueness part is more difficult and will be postponed.
+\begin{lemma}
+Let $f,g\in k[x]$. If $g\ne 0$, there exist polynomials $h,r\in k[x]$ such that $f=hg+r$, where either $r=0$ or $r\ne0$ and $\deg{r}\le \deg{g}$.
+\end{lemma}
+\begin{proof}
+If $g\mid f$, we are done. If $g\nmid f$, let $r= f-hg$ be the polynomial of least degree among all polynomials of the form $f-lg$ with $l\in k[x]$. We claim that $\deg{r}<\deg{g}$. If not, let the leading term of $r$ be $ax^d$ and that $g$ be $bx^m$. Then $r-\frac{a}{b}x^{d-m}g(x)= f-(h+\frac{a}{b}x^{d-m})g$ has smaller degree than $r$ and is of the given form. This is a contradiction.
+\end{proof}
+\begin{lemma}\label{gcdfgd}
+Given $f,g\in k[x]$ there is a $d\in k[x]$ such that $(f,g)=(d)$.
+\end{lemma}
+\begin{proof}
+See Theorem \ref{kxpid}.
+\end{proof}
+\begin{definition}
+Let $f,g\in k[x]$. Then $d\in k[x]$ is said to be a greatest common divisor of $f$ and $g$ if $d$ divides $f$ and $g$ and every common divisor of $f$ and $g$ divides $d$.
+\end{definition}
+\begin{remark}
+Notice that the greatest common divisor of two polynomials is determined up to multiplication by a constant. If we require it to be monic, it is uniquely determined and we may speak of the greatest common divisor.
+\end{remark}
+\begin{lemma}
+Let $f,g\in k[x]$ By lemma \ref{gcdfgd} there is a $d\in k[x]$ such that $(f,g)=(d)$. $d$ is the greatest common divisor of $f$ and $g$.
+\end{lemma}
+\begin{proof}
+Since $f\in (d)$ and $g\in(d)$ we have $d\mid f$ and $d\mid g$. Suppose that $h\mid f$ and that $h\mid g$. Then $h$ divides every elements in $(f,g)=(d)$. In particular $h\mid d$, we are done.
+\end{proof}
+\begin{definition}
+Two polynomial $f$ and $g$ are said to be relatively prime if the only common divisor of $f$ and $g$ are constants. In other words, $(f,g) = (1)$.
+\end{definition}
+\begin{proposition}
+If $f$ and $g$ are relatively prime and $f\mid gh$, then $f\mid h$.
+\end{proposition}
+\begin{corollary}
+If $p$ is an irreducible polynomial and $p\mid fg$, then $p\mid g$ or $p\mid g$. 
+\end{corollary}
+\begin{corollary}
+If $p$ is a monic irreducible polynomial and $f,g\in k[x]$, we have $$\ord{p}{fg}=\ord{p}{f}+\ord{p}{g}.$$
+\end{corollary}
+Using these tools, we can prove the uniqueness of factorizaion.
+\section{Unique Factorizaion in a Principal Ideal Domain}
+For this section, we mostly refer to Section \ref{PIDUFD} and supply some details. 
 \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
