@@ -113,8 +113,8 @@ notes class for math]
 
 % non-framed environments
 \newtheoremstyle{nonframedbox}
-{5pt}
-{5pt}
+{1pt}
+{1pt}
 {\normalfont}
 {}
 {\small\bf\sffamily\color{myimportantcolor}}
@@ -185,7 +185,7 @@ linewidth=4pt]{definitionBox}
 
 % Remark box
 \newmdenv[skipabove=3pt,
-skipbelow=3pt,
+skipbelow=7pt,
 leftline=true,
 rightline=false,
 topline=false,
@@ -194,7 +194,7 @@ linecolor=myimportantcolor,
 innerleftmargin=6pt,
 innerrightmargin=12pt,
 innertopmargin=5pt,
-innerbottommargin=5pt,
+innerbottommargin=0pt,
 linewidth=3.5pt]{remarkBox}
 
 % Corollary box
