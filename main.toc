@@ -5,4 +5,6 @@
 \contentsline {section}{\numberline {1.4}Class Notes 17-01-17}{8}
 \contentsline {section}{\numberline {1.5}Unique Factorization in $k[x]$}{10}
 \contentsline {section}{\numberline {1.6}Unique Factorizaion in a Principal Ideal Domain}{11}
+\contentsline {chapter}{\numberline {2}Congruence}{13}
+\contentsline {section}{\numberline {2.1}Class Notes 17-01-19}{13}
 \contentsfinish 

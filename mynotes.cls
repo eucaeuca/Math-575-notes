@@ -65,13 +65,6 @@ notes class for math]
 \addtolength{\headheight}{2.5pt}
 \renewcommand{\footrulewidth}{0.1pt}
 
-\makeatletter
-\renewcommand{\cleardoublepage}{
-\clearpage\ifodd\c@page\else
-\hbox{}\vspace*{\fill}
-\thispagestyle{empty}
-\newpage
-\fi}
 
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
 \renewcommand{\qedsymbol}{$\blacksquare$}% qed
