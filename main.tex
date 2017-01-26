@@ -515,11 +515,74 @@ We claim that if the statement is true for $m,n\,((m,n) = 1)$, then it's true fo
 &= m\cdot n.
 \end{align*}
 \end{proof}
-
-
-
-
-
+\section{Class Notes 17-01-24}
+Suppose $I,J\subset R$ are two ideals, how to make new ideals with $I,J$? Evidently, $I\cap J$ and $I+J$ are ideals. Also,
+$$I\cdot J:=\{\sum a_i b_i, a_i\in I, b_i\in J\}\subset I\cap J$$ is an ideal. 
+\begin{example}
+Let $I=m\Z$,$J=n\Z$. then we have \quad\begin{tabular}{|c|c|c|}\hline
+$I+J$ & $I\cap J$ & $I\cdot J$\\\hline
+$((m,n))$ & $([m,n])$ & $mn\Z$\\\hline
+\end{tabular}.
+\end{example}
+\begin{definition}
+We say two ideals $I,J$ are coprime if $I+J=(1)$.
+\end{definition}
+\begin{remark}
+If $I, J$ are coprime, then $I\cap J = I\cdot J$.
+\end{remark}
+\begin{proof}
+For some $x\in I\cap J$, since $I,J$ are coprime, there exists some $a\in I, b\in J$ such that $a+b = 1$. But then $a\cdot x + x\cdot b = x\in I\cdot J$. So $I\cap J \subset I\cdot J$. The other direction is obvious.
+\end{proof}
+\begin{theorem}[Generalized Chinese Remainder Theorem]
+Let $I_1, I_2, \ldots, I_n$ be pairwise coprime ideals in $R$, then the map
+$$\phi: R\rightarrow R/I_1\times \ldots \times R/I_n$$
+\begin{itemize}
+\item[1)] is surjective
+\item[2)] has $\ker\phi = I_1I_2\ldots I_n = I_1\cap I_2\cap \ldots \cap I_n$
+\end{itemize}
+\end{theorem}
+\begin{lemma}
+We first look at $n=2$ case. If $I,J$ are coprime ideals in $R$, then the map
+$$\phi: R\rightarrow R/I \times R/J$$
+\begin{itemize}
+\item[1)] is surjective.
+\item[2)] has $\ker\phi = I\cap J = IJ$.
+\end{itemize}
+\end{lemma}
+\begin{proof}
+It's enough to solve the system of congrence
+\begin{align*}
+x&\con{1}{I}\\
+x&\con{0}{J}
+\end{align*} and \begin{align*}
+y&\con{0}{I}\\
+y&\con{1}{J}
+\end{align*}
+Since $I,J$ are coprime, there exists $c\in I, d\in J$ such that $c+d = 1$. $c, d$ is the solution to our two systems.
+\end{proof}
+\begin{lemma}
+$I_1$ is coprime to $I_2I_3\cdots I_n$.
+\end{lemma}
+\begin{proof}
+There exist \begin{align*}
+a_2+b_2 &= 1\\
+a_3+b_3 &= 1\\
+\ldots\\
+a_n+b_n &=1,
+\end{align*}
+$a_i\in I_1$, $b_j\in I_j$.\\
+Then \begin{align*}
+b_2b_3\ldots b_n &= (1-a_2)\ldots (1-a_n)\\
+&= 1 + a, 
+\end{align*}
+where $a\in I_1$.\\
+By $n=2$ case 
+\begin{diagram}
+R & \rTo & R/I_1\times R/(I_2\times I_3\times\cdots\times I_n)\\
+\dTo & \ruTo\\
+R/I_1\times R/I_2\times \cdots\times R/I_n\\
+\end{diagram}
+\end{proof}
 \end{document}
 
 

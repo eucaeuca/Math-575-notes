@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.27)  22 JAN 2017 09:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.27)  26 JAN 2017 14:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1256,15 +1256,27 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: Not enough space on this page on input line 508.
  [15]
 Package mdframed Info: Not enough space on this page on input line 508.
-
+Package mdframed Info: mdframed works in twoside mode on input line 527.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 527.
+Package mdframed Info: mdframed works in twoside mode on input line 530.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 530.
+Package mdframed Info: mdframed works in twoside mode on input line 536.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 536.
+ [16]
 Commutative Diagram: try the PostScript option for better results
-[16] (./main.aux) ) 
+[17] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 25200 strings out of 493029
- 464082 string characters out of 6136234
- 549967 words of memory out of 5000000
- 28303 multiletter control sequences out of 15000+600000
- 14848 words of font info for 86 fonts, out of 8000000 for 9000
+ 25205 strings out of 493029
+ 464156 string characters out of 6136234
+ 550036 words of memory out of 5000000
+ 28306 multiletter control sequences out of 15000+600000
+ 14899 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,13n,56p,10414b,589s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
@@ -1287,10 +1299,10 @@ y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on main.pdf (16 pages, 254720 bytes).
+Output written on main.pdf (17 pages, 258973 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
+ 147 PDF objects out of 1000 (max. 8388607)
+ 105 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  22541 words of extra memory for PDF output out of 24883 (max. 10000000)
 
