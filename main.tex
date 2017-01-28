@@ -11,7 +11,7 @@ A \emph{ring} is a set with two binary operations $(+,\cdot)$ satisfying
 \item $(R,+)$ is an \emph{abelian group}, which means
 \begin{itemize}
 \item $+$ is commutative and associative.
-\item $\exists\ 0_R, a+0_R=0_R+a$ for all $a\in R$.
+\item $\exists\ 0_R, a=a+0_R=0_R+a$ for all $a\in R$.
 \item Given $a\in R$, $\exists a'\in R$ such that $a+a'=0_R$.
 \end{itemize}
 \item 
@@ -650,9 +650,20 @@ We can then prove the theorem.
 \begin{proof}
 	Let $K$ be a field. Let $G\subset K^{\times}$ be a finite subgroup of order $n$. $G\subset \{\hbox{roots of} x^n-1\}\Rightarrow G = \{\hbox{roots of} x^n -1\}$. Any element in $G$ has order dividing by $n$ for every divisor $d$ of $n$. Let $\Sigma_d = \{a\in G, o(a) = d\}$, then $$G=\sqcup_{d\mid n} \Sigma_d, \quad n=|G| = \sum_{d\mid n}|\Sigma_d|.$$
 	We claim: $|\Sigma_d| = 0$ or $\phi(d)$.\\
-	If $\Sigma_d = \emptyset\Rightarrow |\Sigma_d| = 0$. Suppose $\Sigma_d\ne \emptyset\Rightarrow \exists a\in G, \hbox{s.t.} o(a) = d$. Let $H =\langle a\rangle = \{1,a,\ldots, a^{d-1}\}\subset G$\notcomplete
+	If $\Sigma_d = \emptyset\Rightarrow |\Sigma_d| = 0$. Suppose $\Sigma_d\ne \emptyset\Rightarrow \exists a\in G, \hbox{s.t.} o(a) = d$. Let $H =\langle a\rangle = \{1,a,\ldots, a^{d-1}\}\subset G.$
+	i.e.,\begin{align*}\Sigma_d &=\hbox{set of elements with order } d\\
+	&= \hbox{all elements of } H
+	\end{align*}
+	$\Rightarrow |\Sigma_d| = \phi(d)$. Then $$n=\sum_{d\mid n}|\Sigma_d|\le \sum_{d\mid n}\phi(d) = n$$
+	$\Rightarrow |\Sigma_d| = \phi(d), \forall d\mid n$. In particular $|\Sigma_n| = \phi(n)\Rightarrow G$ is cyclic.
 \end{proof}
-
+We then want to discuss the structure of $(\Z/p^{\gamma}\Z)^{\times}$
+\begin{theorem}
+	If $p$ is an odd prime, then $(\Z/p^{\gamma}\Z)^{\times}$ is cyclic.
+\end{theorem}
+\begin{proof}
+	Since $\Z/p^{\gamma}\Z\rightarrow\Z/p\Z$ is surjective, $(\Z/p^{\gamma}\Z)^{\times}\rightarrow(\Z/p\Z)^{\times}$ is surjective. Let us denote $G:=(\Z/p^{\gamma}\Z)^{\times}$, $H:=(\Z/p\Z)^{\times}$, and let $K$ be the kernal of $G\rightarrow H$. Note we have $|G|=p^{\gamma -1 }(p-1), |H| = p-1$. So we have $|K| = \frac{|G|}{|H|} = p^{\gamma -1}$.
+\end{proof}
 \end{document}
 
 
