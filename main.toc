@@ -8,4 +8,5 @@
 \contentsline {chapter}{\numberline {2}Congruence}{13}
 \contentsline {section}{\numberline {2.1}Class Notes 17-01-19}{13}
 \contentsline {section}{\numberline {2.2}Class Notes 17-01-24}{16}
+\contentsline {section}{\numberline {2.3}Class Notes 17-01-26}{18}
 \contentsfinish 
