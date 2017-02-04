@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  28 JAN 2017 14:50
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  4 FEB 2017 13:01
 entering extended mode
 **main.tex
 (C:\Users\yucheng\Documents\GitHub\Math-575-notes\main.tex
@@ -1292,17 +1292,22 @@ Package mdframed Info: mdframed works in twoside mode on input line 661.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 661.
+ [19]
+Package mdframed Info: mdframed works in twoside mode on input line 701.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 701.
 
 Commutative Diagram: try the PostScript option for better results
-[19] (C:\Users\yucheng\Documents\GitHub\Math-575-notes\main.aux) ) 
+[20] (C:\Users\yucheng\Documents\GitHub\Math-575-notes\main.aux) ) 
 Here is how much of TeX's memory you used:
- 25283 strings out of 493921
- 465265 string characters out of 3148078
- 548346 words of memory out of 3000000
- 28143 multiletter control sequences out of 15000+200000
+ 25290 strings out of 493921
+ 465313 string characters out of 3148078
+ 548474 words of memory out of 3000000
+ 28150 multiletter control sequences out of 15000+200000
  14950 words of font info for 88 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 62i,13n,56p,10414b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,14n,56p,10414b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
 <G:/App_insta
 ll/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><G:/App_install/NEW/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/App_install/NEW/MiKTeX/fonts/
@@ -1324,9 +1329,9 @@ type1/public/amsfonts/latxfont/line10.pfb><G:/App_install/NEW/MiKTeX/fonts/type
 lic/amsfonts/symbols/msam5.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/am
 sfonts/symbols/msbm10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfont
 s/symbols/msbm7.pfb>
-Output written on main.pdf (19 pages, 297839 bytes).
+Output written on main.pdf (20 pages, 305395 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
+ 158 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  22541 words of extra memory for PDF output out of 24883 (max. 10000000)
 
