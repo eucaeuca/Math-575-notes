@@ -10,4 +10,5 @@
 \contentsline {section}{\numberline {2.2}Class Notes 17-01-24}{16}
 \contentsline {section}{\numberline {2.3}Class Notes 17-01-26}{18}
 \contentsline {section}{\numberline {2.4}Class Notes 17-01-31}{20}
+\contentsline {section}{\numberline {2.5}Class Notes 17-02-02}{21}
 \contentsfinish 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  4 FEB 2017 13:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.5.25)  6 FEB 2017 00:34
 entering extended mode
 **main.tex
 (C:\Users\yucheng\Documents\GitHub\Math-575-notes\main.tex
@@ -1297,14 +1297,27 @@ Package mdframed Info: mdframed works in twoside mode on input line 701.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 701.
+Package mdframed Info: mdframed works in twoside mode on input line 729.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 729.
+Package mdframed Info: mdframed works in twoside mode on input line 741.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 741.
+ [20]
+Package mdframed Info: mdframed works in twoside mode on input line 752.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 752.
 
 Commutative Diagram: try the PostScript option for better results
-[20] (C:\Users\yucheng\Documents\GitHub\Math-575-notes\main.aux) ) 
+[21] (C:\Users\yucheng\Documents\GitHub\Math-575-notes\main.aux) ) 
 Here is how much of TeX's memory you used:
- 25290 strings out of 493921
- 465313 string characters out of 3148078
- 548474 words of memory out of 3000000
- 28150 multiletter control sequences out of 15000+200000
+ 25294 strings out of 493921
+ 465380 string characters out of 3148078
+ 548550 words of memory out of 3000000
+ 28154 multiletter control sequences out of 15000+200000
  14950 words of font info for 88 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  62i,14n,56p,10414b,589s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1312,26 +1325,27 @@ Here is how much of TeX's memory you used:
 ll/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><G:/App_install/NEW/MiK
 TeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><G:/App_install/NEW/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmex10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmmi12.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><G:/Ap
-p_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/App_install/N
-EW/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><G:/App_install/NEW/MiKTeX/f
-onts/type1/public/amsfonts/cm/cmr5.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmss10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmss
-bx10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><G:/App_inst
-all/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><G:/App_install/NEW/MiK
-TeX/fonts/type1/public/amsfonts/cm/cmti10.pfb><G:/App_install/NEW/MiKTeX/fonts/
-type1/public/amsfonts/latxfont/line10.pfb><G:/App_install/NEW/MiKTeX/fonts/type
-1/public/amsfonts/symbols/msam10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/pub
-lic/amsfonts/symbols/msam5.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/am
-sfonts/symbols/msbm10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfont
-s/symbols/msbm7.pfb>
-Output written on main.pdf (20 pages, 305395 bytes).
+ic/amsfonts/cmextra/cmex7.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mmi12.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><
+G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><G:/App_inst
+all/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><G:/App_install/NEW/MiK
+TeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><G:/App_install/NEW/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr5.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmss10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.p
+fb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><G:/App
+_install/NEW/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><G:/App_install/NE
+W/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><G:/App_install/NEW/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmti10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/
+public/amsfonts/latxfont/line10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/am
+sfonts/symbols/msam5.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb><G:/App_install/NEW/MiKTeX/fonts/type1/public/amsfonts/symb
+ols/msbm7.pfb>
+Output written on main.pdf (21 pages, 322061 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
+ 165 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  22541 words of extra memory for PDF output out of 24883 (max. 10000000)
 
