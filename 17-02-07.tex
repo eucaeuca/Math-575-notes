@@ -1,0 +1,27 @@
+\section{Class Notes 17-02-07}
+\begin{definition}
+	A finite field is a field with finite many elements
+\end{definition}
+\begin{example}
+	$\Z/p\Z$ is a finite field
+\end{example}
+We know that there is always a homomorphism from \Z to a ring. Let $K$ be a finite field, the homomorphism $f: \Z\rightarrow K$ can't be injective, so the kernal of $f$ is not zero, i.e., the kernal is $n\Z$ for some $n$. Let ring $P$ be the image of $f$, then there is an isomorphism $\phi: \Z/n\Z\rightarrow P$. So we may identify $\Z/n\Z$ and $P$. On the other hand, $P$ is a subring of a field, therefore $P$ is also an integral domain. But an integral domain with finite elements is a field. So equivalently, $\Z/n\Z$ has to be a field, which implies that $n$ is a prime. So we conclude: 
+\begin{theorem}
+Every finite field $K$ has a subfield isomorphic to $\Z/p\Z$. We say $K$ has charateristic $p$ and denote $F_p=\Z/p\Z$.
+\end{theorem}
+If $F\subset E$ are fields, we may view $E$ as a vector space over $F$, or a $F-$vector space. We will write $\dim{E}:=[E:F]$ and say $E$ is a finite extension of $F$.
+\begin{example}
+	$[\C:\R]=2$
+\end{example}
+Notice that if $K$ is a finite field, then $[K:F_p]$ is finite, say $n$. Let $x_1,x_2,\ldots, x_n$ be the basis of the $F_p-$field, then explicitly, $$K=\{c_1x_1+c_2x_2+\ldots + c_nx_n\},\quad\forall c_i\in F_p,$$which implies that $|K| = p^n$.\\
+Let $K$ be a field with $p^n$ elements, then the multiplicative subgroup (equivalently, the group of units), $K^{\times}$ is finite, and therefore cyclic. We have $$\al^{p^n-1}=1,\quad\forall \al\in K^{\times}$$or $$\al^{p^n}=\al,\quad\forall \al\in K.$$Since a polynomial $f$ of degree $\deg f$ has at most $\deg f$ roots in a field, $x^{p^n}=x$ has at most $p^n$ roots in $K$. So the $p^n$ roots of the polynomail $x^{p^n}=x$ form exactly the field $K$.\\
+We now want to explicitly construct a field of order $p^n$ (or equivalently, a field in which $x^{p^n}-x$ factors completely). 
+\begin{exercise}
+	Let $L,E,F$ be fields. $E$ is a field extension of $F$, $L$ is a field extension of $E$.\\ Prove that 
+	$$[E:F][L:E]=[L:F]
+	$$ 
+\end{exercise}
+\begin{proof}
+Just write down the basis.
+\end{proof}
+

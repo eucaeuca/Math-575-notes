@@ -1,0 +1,136 @@
+\section{Class Notes 17-01-10}
+For us, ring means commutative ring with identity.
+\begin{definition}
+A \emph{ring} is a set with two binary operations $(+,\cdot)$ satisfying
+\begin{enumerate}
+\item $(R,+)$ is an \emph{abelian group}, which means
+\begin{itemize}
+\item $+$ is commutative and associative.
+\item $\exists\ 0_R, a=a+0_R=0_R+a$ for all $a\in R$.
+\item Given $a\in R$, $\exists a'\in R$ such that $a+a'=0_R$.
+\end{itemize}
+\item 
+$\cdot$ is commutative and associative.\\
+$\exists\ 1_R$ such that $a\cdot 1_R=1_R\cdot a =a$ for all $a\in R$.
+\item $\cdot$ is distributive over addition, which means
+\begin{itemize}
+\item $a\cdot(b+c) = a\cdot b+a\cdot c$
+\item $(a+b)\cdot c = a\cdot c +b\cdot c$
+\end{itemize}
+\end{enumerate}
+\end{definition}
+\begin{exercise}\mbox{}
+\begin{enumerate}
+\item Show that $a+b=a+c\Rightarrow b=c.$(Cancellation)
+\begin{proof}
+\begin{align*}
+a+b=a+c &\Leftrightarrow a'+ (a+b) = a' + (a+c)\\
+&\Leftrightarrow (a'+a) +b = (a'+a) +c\\
+&\Leftrightarrow 0_R+b =0_R +c\\
+&\Leftrightarrow b=c
+\end{align*}
+\end{proof}
+\item Show $a'$ is unique. We denote this $a'$ by $-a$.
+\begin{proof}
+if the statement doesn't hold, then there exist $a',a''$ such that $a+a' =0_R=a+a''$. We then apply cancellation and get $a'=a''$.
+\end{proof}
+\item Show $0_R$ is unique.
+\begin{proof}
+Say there are two zero element $0_R$ and $0_R'$, then we have
+$$0_R =0_R+0_R' = 0_R'$$
+\end{proof}
+\item Show $1_R$ is unique.
+\begin{proof}
+Say there are two unit element $1_R$ and $1_R'$, then we have
+$$1_R = 1_R\cdot 1_R' =1_R'$$
+\end{proof}
+\item Show $a\cdot 0_R =0_R \cdot a = 0_R$
+\begin{proof}
+We know that $a\cdot 0_R +a=a\cdot (0_R+1_R) =a\cdot 1_R =a = 0_R+a$, apply cancellation then we are done.
+\end{proof}
+\item Show that $(-1_R)\cdot a =-a$.
+\begin{proof}
+Since $a\cdot 0_R = 0_R$, we have $a\cdot(1_R+(-1_R)) =0_R$ or $a+ (-1_R)\cdot a = 0_R$. Then $-a=(-1_R)\cdot a$, for $a'$ is unique.
+\end{proof}
+\item The zero ring is the ring with $1$ element. Show $R$ is zero ring $\Leftrightarrow$ $1_R = 0_R$.
+\begin{proof}\mbox{}\\
+$``\Rightarrow":$ Trivial.\\
+$``\Leftarrow":$ Since we have $a\cdot 1_R =1_R\cdot a =a$ for all $a\in R$ and $1_R=0_R$, we have $0_R = a\cdot 0_R= a$ for all $a\in R$.
+\end{proof}
+\item Does cancellation hold for $\cdot$\;?\\
+\textit{Sol.} No. Consider $a\cdot b = a\cdot c$ and $a\neq 0_R$, then $a\cdot(b-c)=0_R$. So if $R$ is an \emph{integral domain}, then we can apply cancellation of non-zero element.
+\end{enumerate}
+\end{exercise}
+\begin{definition}
+$R$ is said to be an \emph{integral domain}  if 
+$$a\cdot b =0\quad\Longleftrightarrow\quad a=0\ \mbox{ or }\ b=0.$$
+\end{definition}
+\begin{definition}
+$R$ is said to be a field if every non-zero element in $R$ has a multiplication inverse.
+\end{definition}
+\begin{exercise}\mbox{}
+\begin{enumerate}
+\item If $R$ is an integral domain, then we can apply cancellation of non-zero element.
+\item Show that every field is an integral domain.
+\begin{proof}
+If $a\cdot b = 0$ and $a\neq 0_R$, let $a'$ be the multiplication inverse of $a$, then $b=1_R \cdot b=a'\cdot a\cdot b =a'\cdot0_R=0$.
+\end{proof}
+\item Check that $a^{-1}$ is unique.
+\begin{proof}
+If $a^{-1}$ and $a'$ are both multiplication inverse of $a$, then $a\cdot a^{-1} = a\cdot a' =1_R$. Apply cancellation of non-zero element, we have $a' = a^{-1}$.
+\end{proof}
+\end{enumerate}
+\end{exercise}
+\begin{remark}Though every field is an integral domain, not every integral domain is a field. For example, $\mathbb{Z}$ is an integral domain but not a field.
+\end{remark}\mbox{}\\
+\underline{\bfseries Ways to make new rings:}\\[1pt]
+Let $R$ be an integral domain, how to construct a new ring?\\
+Let $K=\{(a,b), a,b\in R, b\neq 0\}$. We also define an equivalent relation $(a,b)\sim(c,d)$ if $ad=bc$.
+\begin{itemize}
+\item Check this is an equivalent class.
+\begin{itemize}
+\item $(a,b)=(a,b)$
+\item if $(a,b)\sim (c,d)$ and $(c,d)\sim (e,f)$, then $(a,b)\sim (e,f)$
+\end{itemize}
+\item We define \begin{itemize}
+ \item $(a,b)+(c, d) = (ad+bc. bd)$
+ \item $(a,b)\cdot (c,d) = (ac, bd)$
+ \end{itemize}
+ Check these two operation pass to equivalent class.
+\item $0_K=[(0,1_R)]$, $1_K = [(1_R, 1_R)]$
+\end{itemize}
+\begin{definition}
+If $R,S$ are two rings, a homomorphism $\phi:R\rightarrow S$ is a map such that \begin{enumerate}
+\item $\phi(1_R)=1_S$.
+\item $\phi(a+b) = \phi(a)+\phi(b)$.
+\item $\phi(ab) = \phi(a)\phi(b)$.
+\end{enumerate}
+An isomorphism is a homomorphism that is both injective and surjective.
+\end{definition}
+$\phi: R\rightarrow S$, $a\mapsto [(a,1_R)]$ is an injective homomophism. For example, we have $\mathbb{Z}\subset \mathbb{Q}$.
+\begin{remark}
+If $R$ is a field, then the homomorphism is isomorphism, i.e., $\phi$ is also surjective. Because for any $[(a,b)]\in K$, we have $\phi(ab^{-1})=[(ab^{-1},1)] = [(a,b)]$.
+\end{remark}\mbox{}\\
+\underline{\bfseries Ways to kill elements:}
+\begin{definition}
+An ideal $I$ in $R$ is a non-empty subset such that 
+\begin{enumerate}
+\item $I$ is closed under addition.
+\item $I$ is closed under multiplication by arbitrary elt in $R$.
+\end{enumerate}
+Note that $(I, +)\subset (R,+)$ is an abelian subgroup.
+\end{definition}
+\begin{example}\mbox{}
+\begin{itemize}
+\item $(0)$ is an ideal.
+\item $R$ itself is an ideal.
+\item if $a\in R$, the $R\cdot a$ is an ideal, denoted by $(a)_R$.
+\item $n\mathbb{Z}$ is an ideal in $\mathbb{Z}$.
+\end{itemize}
+\end{example}
+\underline{\bfseries Quotient Ring:} Let $I\subset R$ be an ideal. $R/I=$ coset of $I$ in $R$ $=\{a+I,a\in R\}$, we define
+\begin{enumerate}
+\item $(a+I)\oplus(b+I) = (a+b)+I$.
+\item $(a+I)\odot(b+I)=ab+I$.
+\end{enumerate}
+with zero elt $(0+I)$ and identity elt $(1+I)$.

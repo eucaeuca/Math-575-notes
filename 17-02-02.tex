@@ -1,0 +1,17 @@
+\section{Class Notes 17-02-02}
+\begin{lemma}[Gauss's Lemma]
+	If $(a,p)=1$. Consider the residue system 
+	$$\left\{-\frac{p-1}{2},\ldots,-1,+1,+2,\ldots,+\frac{p-1}{2}\right\}.$$ Let $\mu=\#$ of negative classes that $a\cdot1,a\cdot2,\ldots,a\cdot\frac{p-1}{2}$ fall into. Then 
+	$$\leg{a}{p}=(-1)^\mu.
+	$$
+\end{lemma}
+Let $a\cdot i \con{\pm m_i}{p}$, we claim that if $i\ne j$, then $m_i\ne m_j$.
+\begin{proof}
+	if $m_i=m_j$, then $a_i\con{\pm a_j}{p}$, so $i\con{\pm j}{p}$. We know that 
+	$$\left\{m_1,m_2,\ldots,m_{\frac{p-1}{2}} \right\}=\left\{1,2,\ldots,\frac{p-1}{2}\right\}$$Let $\mu=\#$ of negative signs. Then $a^{\frac{p-1}{2}}\prod i\con{(-1)^\mu \prod m_i}{p}$
+\end{proof}
+\begin{lemma}[Eisenstein's Lemma]\mbox{}\\
+	Let $\Sigma=\{2,4,\ldots, p-1 \}$, for $j\in\Sigma$, consider $[\frac{aj}{p}]$, then
+	$$\leg{a}{p} = (-1)^{\sum\limits_{j\in\Sigma}[\frac{aj}{p}]}.$$
+\end{lemma}
+

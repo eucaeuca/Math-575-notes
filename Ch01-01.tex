@@ -1,0 +1,50 @@
+\section{Unique Factorization in $\mathbb{Z}$}
+It will be more convenient to work with $\mathbb{Z}$ rather than restricting ourselves to the positive integers. The notion of divisibility carries over with no difficulty to $\mathbb{Z}$. If $p$ is a positive prime, $-p$ will also be a prime. We shall not consider $1$ or $-1$ as primes even though they fit the definition. This is simply a useful convention. They are called the units of $\mathbb{Z}$.\\There are a number of simple properties of division that we shall simply list.
+\begin{enumerate}
+\item $a\mid a,a\neq0$.
+\item If $a\mid b$ and $b\mid a$, then $a=\pm b$.
+\item If $a\mid b$ and $b\mid c$, then $a\mid c$.
+\item If $a\mid b$ and $a\mid c$, then $a\mid (b+c)$.
+\end{enumerate}
+\begin{lemma}
+Every nonzero integer can be written as a product of primes.
+\end{lemma}
+\begin{theorem}
+For every nonzero integer $n$ there is a prime factorization$$n=(-1)^{\varepsilon(n)}\prod_pp^{a(p)},$$with the exponents uniquely determined by $n$. In fact, we have $a(p)=\mbox{ord}_pn$.
+\end{theorem}
+The proof if this theorem if is not as easy as it may seem. We shall postpone the proof until we have established a few preliminary results.
+\begin{lemma}
+If $a,b\in\mathbb{Z}$ and $b\ge0$, there exist $q,r\in\mathbb{Z}$ such that $a=qb+r$ with $0\leq r<b$.
+\end{lemma}
+\begin{definition}
+If $a_1,a_2,\ldots,a_n\in\mathbb{Z}$, we define $(a_1,a_2,\ldots,a_n)$ to be the set of all integers of the form $a_1x_1+a_2x_2+\cdots+a_nx_n$ with $x_1,x_2,\ldots,x_n\in\mathbb{Z}$.
+\end{definition}
+\begin{remark}
+Let $A = (a_1,a_2,\ldots,a_n)$. Notice that the sum and difference of two elements in $A$ are again in $A$. Also, if $a\in A$ and $r\in\mathbb{Z}$, then $ra\in A$, i.e., $A$ is an ideal in the ring $\mathbb{Z}$
+\end{remark}
+\begin{lemma}
+If $a,b\in \mathbb{Z}$, then there is a $d\in \mathbb{Z}$ such that $(a, b)=(d)$
+\end{lemma}
+\begin{definition}
+Let $a,b\in\mathbb{Z}$. An integer $d$ is called a greatest common divisor of $a$ and $b$ if $d$ is a divisor of both $a$ and $b$ and if every other common divisor of $a$ and $b$ divides $d$.
+\end{definition}
+\begin{remark}
+The gcd of two numbers, if it exists, is determined up to sign.
+\end{remark}
+\begin{lemma}
+Let $a,b\in\mathbb{Z}$. If $(a,b) = (d)$ then $d$ is a greatest common divisor of $a$ and $b$.
+\end{lemma}
+\begin{definition}
+We say that two integers $a$ and $b$ are relatively prime if the only common divisors are $\pm1$, the units.
+\end{definition}
+It's fairly standard to use the notation $(a, b)$ for the greatest common divisor of $a$ and $b$. With this convention we can say that $a$ and $b$ are relatively prime if $(a,b)=1$.
+\begin{proposition}
+Suppose that $a\mid bc$ and that $(a,b)=1$. Then $a\mid c$.
+\end{proposition}
+\begin{corollary}
+If $p$ is a prime and $p\mid bc$, then either $p\mid b$ or $p\mid c$.
+\end{corollary}
+\begin{corollary}
+Suppose that $p$ is a prime and that $a,b\in\mathbb{Z}$. Then $\mbox{ord}_pab=\mbox{ord}_pa+\mbox{ord}_pb.$
+\end{corollary}
+

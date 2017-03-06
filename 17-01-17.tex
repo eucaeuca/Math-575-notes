@@ -1,0 +1,55 @@
+\section{Class Notes 17-01-17}
+\begin{example}
+\Z{} is a PID.
+\end{example}
+\begin{remark}
+Any ideal $I\subset\Z$ is of the form of $n\Z$.
+\end{remark}
+\begin{proof}
+$\forall I\subset \Z$, if $I=(0)$, we are done. If $I$ is not zero ideal, let $n$ be the smallest positive element in $I$. We claim: $I=n\Z$. Let $b\in I$, then $b=nq+r$, where $0\leq r<n$. But $r=b-nq\implies r\in I\implies r=0$. Therefore $b= nq$. 
+\end{proof}
+If $K$ is a field, let $R = k[x] = \mbox{polynomial in variable $x$ over the field $K$}$. What are the units in $R$? For arbitrary $f(x),g(x)\in K[x]$, if $f(x)g(x)=1$, we claim that $f(x), g(x)$ must be constant polynomial. For if we write $f(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots$, $g(x)=b_mx^m+b_{m-1}x^{m-1}+\cdots$. Then $f(x)g(x) = a_nb_m x^{m+n}+\cdots$. Since $a_n\ne0,b_m\ne0$ and \emph{$K$ is an integral domain}, we have $a_nb_m\ne0$. Therefore $$\deg{f(x)g(x)} = \deg{f(x)}+\deg{g(x)}.$$ We then apply this conclusion to $f(x)g(x) = 1$ and get $\deg{f(x)}\deg{g(x)} = \deg{1} = 0$, thus $f(x), g(x)$ must be constant.
+\begin{remark}
+Whether a polynomial is irreducible depends on the field. For example, if $x^2+1\in \R[x]$, then it's irreducible (why?). But if $x^2+1\in \C[x]$, then it's reducible (why?).
+\end{remark}
+\underline{Division Algorithm:} Let $f(x), g(x)\in K[x], g(x)\ne 0$, then there exists $q(x),r(x)\in K[x]$, such that $$f(x)=g(x)q(x)+r(x),$$where $r(x)=0$ or $0\leq\deg{r(x)}<\deg{g(x)}$. \\
+Using this fact, we have the following theorem.
+\begin{theorem}\label{kxpid}
+$K[x]$ is a PID.
+\end{theorem}
+\begin{proof}
+For all ideal $I\in K[x]$, if $I=(0)$, we are done. If $I\ne(0)$, let $g(x)\in I$ be the polynomial of least degree, let $f(x)\in I$, then $$f(x)=g(x)q(x)+r$$with $r=0$ or $0\leq\deg{r(x)}<\deg{g(x)}$ by division algorithm. But then $r(x)=0$, for otherwise $r(x)$ will be a polynomial whose degree is less than $g(x)$. Therefore $f(x)=g(x)q(x)$, $f(x)\in (g(x))$.
+\end{proof}
+\begin{definition}
+A domain $R$ is said to be an Euclidean domain if there exists a function $\lambda: \R\setminus\{0\}\rightarrow\Z^{\ge0}$, such that given $a,b\in R, b\ne0$, there exist $q,r\in R$ such that $a=qb+r$ and either $r=0$ or $0\le\lambda(r)<\lambda(b)$.
+\end{definition}
+\begin{example}
+$R=\Z[i]$ is an Euclidean domain.
+\end{example}
+\begin{proof}
+Let $N(\al)=\al\overline{\al} = a^2+b^2$ (if $\al = a+bi$). Let $\al,\be\in R$, $\be\ne0$, we have
+$$\frac{\al}{\be} = \frac{a+bi}{c+di} = \frac{ac+bd}{c^2+d^2}+\frac{bc-ad}{c^2+d^2}i = r+si. (r,s\in\Q)$$Let $m+ni\in\Z[i]$ be the closest element to $r+si$. We denote $r'=r-m,s'=s-n$, then $\frac{\al}{\be} = r+si = m+ni+r'+s'i$, or 
+$$\al = \be(m+ni)+\be(r'+s'i),$$where $(m+ni)\in\Z[i]$ and $\be(r'+s'i)\in\Z[i]$, we remain to show that $N(\be(r'+s'i))<N(\be)$. This is the case because 
+\begin{align*}
+N(\be(r'+s'i))&= N(\be)N(r'+s'i)\\&\leq N(\be)(\frac{1}{4}+\frac{1}{4})\\&<N(\be)
+\end{align*} We are done.
+\end{proof}
+The Natural question is what are the units in $\Z[i]$? Does a prime in \Z{} still a prime in $Z[i]$? To answer the first question, we assume $u$ is a unit in $\Z[i]$. Then by definition there exists some $v$ such that $uv= 1$. But then $1=N(1) = N(uv) = N(u)N(v)\implies N(u) = 1$. Thus the only possible values of $u$ is $\pm1,\pm i$. We also check they are actually units. Now, to answer the second question, we try some small cases. We look at $5,7,11$ and $13$.
+\begin{example}
+If $5=ab$, $a,b\in \Z[i]$, then $25=N(5) = N(ab) = N(a)N(b)\implies N(a) = 5$. So $a$ can only be $\pm1\pm2i$ or $\pm2\pm i$. We try by hand and find $5= (2+i)(2-i)$ is a factorization, so $5$ is not a prime. 
+\end{example} 
+\begin{example}
+If $7=ab$, $a,b\in \Z[i]$, then $49=N(5) = N(ab) = N(a)N(b)\implies N(a) = 7$. We try by hand and find no factorization, so $7$ is a prime.
+\end{example}
+Use the same method, we find $5,13$ are not prime while $7,11$ are prime.
+\begin{remark}\mbox{}Obervation:
+\begin{enumerate}
+	\item If $p\con{1}{4}$, then $p = \pi\overline{\pi}$, where $\pi$ is a irreducible.
+	\item If $p\con{3}{4}$, then $p$ remains prime.
+	\item If $p=2$, $2=(1+i)(1-i) = (-i)(1+i)^2$ (ramification).
+\end{enumerate}
+\end{remark}
+\begin{remark}
+Let $R = \Z[\omega]$, where $\omega$ is a primitive cube root of $1$, then $R$ is a Euclidean domain.
+\end{remark}
+

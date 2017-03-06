@@ -1,0 +1,69 @@
+\section{Class Notes 17-01-31}
+Last class we have prove that if $n=p$ os a prime, then $(\Z/p\Z)^{\times}$ is cyclic, and if $n$ is odd, $n=p^r$, $(\Z/p\Z)^{\times}$ is cyclic.\notcomplete
+\mbox{}\\
+Let $p$ is an odd prime, $(a,p) = 1$, is $a$ a square modulo $p$? We try $a=-1$ for $p=5,13,\ldots$. We have the following proposition.
+\begin{proposition}
+	$-1$ is a square modulo $p$ $\Longleftrightarrow$ $p\con{1}{4}$.
+\end{proposition}
+\begin{definition}
+	We introduce the legendre symbol 
+	\begin{equation*}
+	\leg{a}{p}=\begin{cases}
+	1 & \text{if $a$ is a square modulo $p$}\\
+	-1 & \text{otherwise}
+	\end{cases}
+	\end{equation*}
+\end{definition}
+We have the following proposition.
+\begin{proposition}\mbox{}\label{poss}
+	\begin{enumerate}
+		\item
+		$\leg{a}{p} = \leg{b}{p}$ if $a\con{b}{p}$
+		\item\label{pos-2}
+		$\leg{a}{p}\con{a^{\frac{p-1}{2}}}{p}$
+		\item\label{pos-3}
+		$\leg{ab}{p} = \leg{a}{p}\leg{b}{p}$
+	\end{enumerate}
+\end{proposition}
+\mbox{}\\The proof of Proposition \ref{poss}.\ref{pos-3} is as followed.
+\begin{proof}
+Let $g$ be a generator of $(\Z/p\Z)^\times$, then  $\langle\,g\,\rangle = \{1,g,g^2,\ldots,g^{p-1} \}$. $1,g^2,g^4,\ldots, g^{p-1}$ are already square. But $g,g^3,g^5,\ldots, g^{p-2}$ are not square (why?). If $g=h^2$ is a square, it will not generate the group!
+\end{proof}
+\mbox{}\\The proof of Proposition \ref{poss}.\ref{pos-2} is as followed.
+\begin{proof}
+if $a=b^2$, then $a^{\frac{p-1}{2}}=b^{p-1}\con{1}{p}$. If $a\ne b^2$, say $a=g$, then $g^{\frac{p-1}{2}}\ncon{1}{p}$ since $g$ is a primitive root. So $g^{\frac{p-1}{2}}\con{-1}{p}$, i.e., $a^{\frac{p-1}{2}}\con{-1}{p}$.
+\end{proof}
+\begin{theorem}\mbox{}
+	\begin{itemize}
+		\item Suppose $p,q$ are odd prime, then $$\leg{p}{q}\leg{q}{p} = (-1)^{\frac{p-1}{2}\frac{q-1}{2}}$$or $$\leg{p}{q} =\leg{q}{p} (-1)^{\frac{p-1}{2}\frac{q-1}{2}}$$
+		Namely, $\leg{p}{q} = \leg{q}{p}$ if either $p,q\con{1}{4}$ and $\leg{p}{q}=-\leg{q}{p}$ otherwise.
+		\item 	\begin{equation*}
+		\leg{2}{p}=\begin{cases}
+		1 & \text{if $p\con{1,7}{8}$}\\
+		-1 & \text{if $p\con{3,5}{8}$}
+		\end{cases}=(-1)^{\frac{p^2-1}{8}}.
+		\end{equation*}
+	\end{itemize}
+\end{theorem}
+\begin{exercise}
+	Is $101$ a square modulo $107$?
+\end{exercise}
+\begin{proof}
+	Yes, because we have
+	\begin{align*}
+	\leg{101}{107}&=\leg{107}{101}=\leg{6}{101}=\leg{2}{101}\leg{3}{101}\\
+	&=(-1)\leg{101}{3}\\
+	&=(-1)\leg{2}{3} = (-1)(-1)=1
+	\end{align*}
+\end{proof}
+\begin{exercise}
+	Is $79$ a square of $97$?
+\end{exercise}
+\begin{proof}
+	Yes, because we have
+	\begin{align*}
+	\leg{79}{97}&=\leg{97}{79}=\leg{18}{79}\\
+	&=\leg{2}{79} = 1
+	\end{align*}
+\end{proof}
+

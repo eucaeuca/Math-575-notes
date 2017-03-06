@@ -1,0 +1,60 @@
+\section{Unique Factorization in $k[x]$}
+In this section we consier the ring $k[x]$ of polynomials with coefficients in a field $k$. If $f,g\in k[x]$, we say that $f$ divides $g$ if there is an $h\in k[x]$ such that $g= fh$.\\
+If $\deg{f}$ denotes the degree of $f$, we have $\deg{fg}= \deg{f}+\deg{g}$ (why? Because a field $k$ is necessarily an integral domain). nonzeros constants are the units of $k[x]$. A nonconstant polynomial $p$ is said to be irreducible if $q\mid p\implies$ $q$ is either a constant or a constant times $p$.
+\begin{lemma}\label{l1}
+Every nonconstant polynomial is the product of irreducible polynomials.
+\end{lemma}
+\begin{proof}
+Simply by induction.
+\end{proof}
+\begin{definition}
+A polynomial $f$ is called monic if its leading coefficient is $1$.
+\end{definition}
+\begin{definition}
+Let $p$ be a monic irreducibe polynomial. We define $\ord{p}{f}$ to be the integer $a$ defined by the property that $p^a\mid f$ but that $p^{a+1}\nmid f$.
+\end{definition}
+\begin{remark}
+$\ord{p}{f} = 0$ iff $p\nmid f$.
+\end{remark}
+\begin{theorem}
+Let $f\in k[x]$. Then we can write$$f= c\prod_pp^{a(p)},$$ where the product is over all monic irreducible polynomials and $c$ is a constant. The constant $c$ and the exponents $a(p)$ are uniquely determined by $f$; in fact, $a(p)= \ord{p}{f}$.
+\end{theorem}
+The existence of such a product follows immediately from Lemma \ref{l1}. The uniqueness part is more difficult and will be postponed.
+\begin{lemma}
+Let $f,g\in k[x]$. If $g\ne 0$, there exist polynomials $h,r\in k[x]$ such that $f=hg+r$, where either $r=0$ or $r\ne0$ and $\deg{r}\le \deg{g}$.
+\end{lemma}
+\begin{proof}
+If $g\mid f$, we are done. If $g\nmid f$, let $r= f-hg$ be the polynomial of least degree among all polynomials of the form $f-lg$ with $l\in k[x]$. We claim that $\deg{r}<\deg{g}$. If not, let the leading term of $r$ be $ax^d$ and that $g$ be $bx^m$. Then $r-\frac{a}{b}x^{d-m}g(x)= f-(h+\frac{a}{b}x^{d-m})g$ has smaller degree than $r$ and is of the given form. This is a contradiction.
+\end{proof}
+\begin{lemma}\label{gcdfgd}
+Given $f,g\in k[x]$ there is a $d\in k[x]$ such that $(f,g)=(d)$.
+\end{lemma}
+\begin{proof}
+See Theorem \ref{kxpid}.
+\end{proof}
+\begin{definition}
+Let $f,g\in k[x]$. Then $d\in k[x]$ is said to be a greatest common divisor of $f$ and $g$ if $d$ divides $f$ and $g$ and every common divisor of $f$ and $g$ divides $d$.
+\end{definition}
+\begin{remark}
+Notice that the greatest common divisor of two polynomials is determined up to multiplication by a constant. If we require it to be monic, it is uniquely determined and we may speak of the greatest common divisor.
+\end{remark}
+\begin{lemma}
+Let $f,g\in k[x]$ By lemma \ref{gcdfgd} there is a $d\in k[x]$ such that $(f,g)=(d)$. $d$ is the greatest common divisor of $f$ and $g$.
+\end{lemma}
+\begin{proof}
+Since $f\in (d)$ and $g\in(d)$ we have $d\mid f$ and $d\mid g$. Suppose that $h\mid f$ and that $h\mid g$. Then $h$ divides every elements in $(f,g)=(d)$. In particular $h\mid d$, we are done.
+\end{proof}
+\begin{definition}
+Two polynomial $f$ and $g$ are said to be relatively prime if the only common divisor of $f$ and $g$ are constants. In other words, $(f,g) = (1)$.
+\end{definition}
+\begin{proposition}
+If $f$ and $g$ are relatively prime and $f\mid gh$, then $f\mid h$.
+\end{proposition}
+\begin{corollary}
+If $p$ is an irreducible polynomial and $p\mid fg$, then $p\mid g$ or $p\mid g$. 
+\end{corollary}
+\begin{corollary}
+If $p$ is a monic irreducible polynomial and $f,g\in k[x]$, we have $$\ord{p}{fg}=\ord{p}{f}+\ord{p}{g}.$$
+\end{corollary}
+Using these tools, we can prove the uniqueness of factorizaion.
+

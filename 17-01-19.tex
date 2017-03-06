@@ -1,0 +1,127 @@
+\section{Class Notes 17-01-19}
+\begin{definition}
+We write $a\con{b}{p}$, if $p\mid (a-b)$.
+\end{definition}
+\begin{remark}
+To solve $ax\con{b}{m}$ in \Z{} is the same to solve $[a]x=[b]$ in $\Z/m\Z$.
+\end{remark}
+We now try to solve the equation $a\con{b}{m}$.
+\begin{proposition}
+A necessary and sufficient condition for this equation to have solutions is $d\mid b$, where $d=(a,m)$ is the gcd of $a$ and $m$.
+\end{proposition}
+\mbox{}\\\underline{Think About: }
+$ax\con{1}{m}$ has solutions is equivalent to $(a,m) = 1$.
+\begin{proof}\mbox{}\\
+$``\Rightarrow'':$ If we have some solution $x_0$ such that $ax_0\con{1}{m}$. Then $ax_0=1+mt$ so that $(a,m)= 1$.\\
+$``\Leftarrow'': $ If $(a,m) = 1$, then there exists $x_0, t$ such that $1=ax_0-mt$, so $ax_0\con{1}{m}$.
+\end{proof}
+\begin{remark}
+In $\Z/m\Z$, $[a]x\equiv[1]$ implies that $[a]$ is a unit. 
+\end{remark}
+\begin{definition}
+$\phi(m) =$ \# of units in $\Z/m\Z$. 
+\end{definition}
+We give a few example:\quad
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+$m$ & $1$ & $2$ & $3$ & $4$ & $5$\\\hline
+$\phi(m)$ & $1$ & $1$ & $2$ & $2$ & $4$\\\hline
+\end{tabular}\\[6pt]
+Now we give the formal proof of our proposition.
+\begin{proof}
+Suppose $x_0$ is a solution, then there exist $t$ such that $$ax_0=b+mt,$$ Since $(a,m)\mid a$, $(a,m)\mid m$, we have $(a,m)\mid b$. Conversely, suppose $(a,m)\mid b$, we may write $b$ as $b= (a,m)b'$. Similarly, $a=(a,m)a'$ and $m=(a,m)m'$ with $(a',m')=1$. Denote $d:=(a,m)$, then $da'x\con{db'}{dm'}$, $a'x\con{b'}{m'}$. Since $(a',m')=1$, $a'x\con{b'}{m'}$ has solutions.
+\end{proof}
+\begin{remark}
+According to the proof, we will have $d=(a,m)$ solutions.
+\end{remark}
+Now we want to introduce \emph{Chinese Remainder Theorem in $\Z$}. We want to solve a system of congruence equations. Namely, we are looking at the system
+\begin{align*}
+x&\con{a_1}{m_1}\\
+x&\con{a_2}{m_2}\\
+&\vdots\\
+x&\con{a_n}{m_n}
+\end{align*}
+where $m_i$ are pairwise coprime.
+\begin{theorem}[Chinese Remainder Theorem]\mbox{}\\
+The system always admits solutions.
+\end{theorem}
+ We notice that if $x_0$ is a solution to the system, so does $x=km_1m_2\cdots m_n+x_0$, $k\in\Z$. So the system will have infinitely many solutions. The sketch of the proof is as followed.\\ Suppose we can solve the system
+\begin{align*}
+x_i&\con{1}{m_i}\\
+x_i&\con{0}{m_j}\quad\forall j\ne i
+\end{align*}
+then $x=a_1x_1+a_2x_2+\cdots+a_nx_n$ is a solution for the original system. But why does the system even have a solution?\\
+Consider the following system as an example,
+\begin{align*}
+x&\con{1}{m_1}\\
+x&\con{0}{m_2}\\
+&\vdots\\
+x&\con{0}{m_n}
+\end{align*}
+We know that since $m_i$ are coprime, $(m_1,m_2m_3\cdots m_n) = 1$.
+\begin{align*}
+\Rightarrow &\ \exists\;c,d_1,\,\mbox{s.t.}\  cm_1+d_1m_2m_3\cdots m_n = 1\\
+\Rightarrow &\ x=d_1m_2m_3\cdots m_n\ \mbox{is a solution}
+\end{align*}
+\begin{remark}
+If there are two solutions for the system, say $x$ and $y$, then $$x-y\con{0}{m_1m_2\cdots m_n}\implies x\con{y}{m_1m_2\cdots m_n}.$$ Namely, the solution is unique up to a multiple of $m_1m_2\cdots m_n$. 
+\end{remark}
+In order to generalize CRT, we need some background.\\
+Suppose $R, S$ are two rings, then $R\times S := \{(r,s), r\in R, s\in S\}$. We also define sum and product on $R\times S$, namely,
+\begin{align*}
+(a,b)+(c,d) &=(a+c, b+d),\\
+(a, b)\cdot (c,d) &= (ac, bd).
+\end{align*}
+We can check that $R\times S$ is actually a ring. The projection maps are ring homomorphisms, i.e., there exist projection maps $E_S, E_R$, \begin{align*}
+E_S: R\times S&\rightarrow S\\
+E_R: R\times S&\rightarrow R
+\end{align*} But there doesn't exist any homomorphism from $S$ or $R$ to $R\times S$.\\
+We know that for a ring homomorphism $\phi: R\rightarrow S$, $\ker{\phi} = \{x\in R, \phi(x) = 0\}$ is an ideal. For ring homomorphism $\Z\rightarrow \Z/m\Z$, it's kernal is exactly the ideal $m\Z$. So in fact, what CRT in \Z{} says is that the ring homomorphism $$f:\Z\rightarrow \Z/m_1\Z\times\Z/m_2\Z\times\cdots\times\Z/m_n\Z,$$ or $$a\mapsto ([a]_{m_1},\ldots,[a]_{m_n})$$is surjective.
+\begin{diagram}
+R & \rTo^\phi & S\\
+\dTo_f & \ruDashto_{\tilde{\phi}}\\
+R/I
+\end{diagram}
+For a ring homomorphism $\phi: R\rightarrow S$, $I = \ker\phi$,
+\begin{itemize}
+\item $\phi$ is injective if and only if $\ker\phi = \{0\}$.
+\item There exists a unique ring homomorphism $\tilde{\phi}: R/I\rightarrow S$, or $\tilde{\phi}: [a]\mapsto \phi(a)$ such that the diagram commutes. $\tilde{\phi}$ is also well defined, for if $[a]= [b]$, then we have \begin{align*}
+[a]=[b] &\Rightarrow (a-b)\in I\\
+		&\Rightarrow \phi(a-b) = 0\\
+		&\Rightarrow \phi(a) = \phi(b).
+\end{align*} 
+\end{itemize}
+Now, let $R = \Z$, $S = \Z/m_1\Z\times \Z/m_2\Z\times \cdots\times \Z/m_n\Z$. Let $m = m_1m_2\cdots m_n$, then $\ker\phi = \Z/m\Z$, we have the following diagram.
+\begin{diagram}
+\Z & \rTo^\phi & \Z/m_1\Z\times \Z/m_2\Z\times \cdots\times \Z/m_n\Z\\
+\dTo_f & \ruTo_{\tilde{\phi}}\\
+\Z/m\Z
+\end{diagram}
+Notice that $\tilde{\phi}$ is an isomorphism.\\
+We have the natural question that what are the units in $R$ and $S$? Let $U(R)$ denote the set of units of the ring $R$, then $U(R\times S) = U(R)\times U(S)$.
+We thus have a branch of corollaries.
+\begin{corollary}
+$U(\Z/m\Z) \cong U(\Z/m_1\Z)\times \cdots\times U(\Z/m_n\Z)$.
+\end{corollary}
+\begin{corollary}
+$\phi(m) = \phi(m_1)\phi(m_2)\cdots\phi(m_n)$.
+\end{corollary}
+\begin{corollary}
+If $m = p_1^{\gamma_1}p_2^{\gamma_2}\cdots p_s^{\gamma_s}$, then 
+\begin{align*}
+\phi(m) &= \phi(p_1^{\gamma_1}p_2^{\gamma_2}\cdots p_s^{\gamma_s})\\
+&=\phi(p_1^{\gamma_1})\phi(p_2^{\gamma_2})\cdots\phi(p_s^{\gamma_s}), 
+\end{align*}
+with $\phi(p_i^{\gamma_i}) = p_i^{\gamma_i} -p_i^{\gamma_i-1}$.
+\end{corollary}
+\begin{corollary}
+$$\sum_{d\mid n}\phi(d) = n$$
+\end{corollary}
+The proof is simply use the fact that the statement is true for primes, and every element of \Z can be factorized as a product of primes.
+\begin{proof}
+We claim that if the statement is true for $m,n\,((m,n) = 1)$, then it's true for $mn$.
+\begin{align*}
+\sum_{d\mid mn} \phi(d) &=\sum_{d_1\mid m,d_2\mid n} \phi(d_1d_2)\\
+&= \sum_{d_1\mid m}\sum_{d_2\mid n} \phi(d_1)\phi(d_2)\\&=(\sum_{d_1\mid m}\phi(d_1))(\sum_{d_2\mid n}\phi(d_2))\\
+&= m\cdot n.
+\end{align*}
+\end{proof}
