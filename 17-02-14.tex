@@ -1,3 +1,26 @@
 \section{Class Notes 17-02-14}
 \underline{Construction of a field of size $p^n$:}
-
+We can find a field $K$ such that $x^{p^n}-x$ splits completely. First notice that $x^{p^n}-x$ has no multiple roots. This is because if we define $f(x):=x^{p^n}-x$, we have $(f(x), f'(x)) = (x^{p^n}-x, p^nx^{p^n-1}-1) = 1$.
+\begin{theorem}
+Any two field with $p^n$ elements are isomorphic.
+\end{theorem}
+\begin{proof}
+Suppose $\abs{L} = p^n$, I claim: $\exists\alpha\in L$, such that $\mathbb{F}_p(\alpha)=\mathbb{F}_p[\alpha]$. Let $K$ be a field with $p^n$ element, $K=\mathbb{F}_p(\alpha), K^{\times}=\langle\alpha\rangle
+$, Let $\phi$ be the homomorphism from $\mathbb{F}_p[x]\rightarrow \mathbb{F}_p[\alpha]$, $\ker{\phi}=(f(x)), f(x)\in \mathbb{F}_p[x]$, $\Rightarrow \frac{\mathbb{F}_p[x]}{(f(x))}\sim \mathbb{F}_p[\alpha]=\mathbb{F}_p(\alpha)=K,\Rightarrow f(x)$ is an irreducible ($K$ is a field).$$[K:\mathbb{F}_p]=\deg{f}.$$ $\alpha$ satisfies $x^{p^n}-x=0$. Because of the isomorphism, $\alpha$ satisfies $f(x)$. $\Rightarrow$ $\alpha$ satisfies the gcd. But $\gcd(x^{p^n}-x, f(x)) =f(x)\Rightarrow f(x)\mid (x^{p^n}-x)$
+\end{proof} 
+So far, we proved, $\exists\alpha$, such that $K=\mathbb{F}_p(\alpha)$.
+\begin{enumerate}
+	\item any such $\alpha$ is a root of an irreducible polynomial in $\mathbb{F}_p[x]$ that divides $x^{p^n}-x$.
+	\item $K\sim \frac{\mathbb{F}_p[x]}{f(x)}$ for some irreducible $f(x)$, $f(x)\mid (x^{p^n}-x)$.
+	\item Let $g(x)$ be any irreducible factor of $x^{p^n}-x$ of degree $n$, $K' = \frac{\mathbb{F}_p}{(g(x))}$, we know $[K': \mathbb{F}_p]=n$, $\Rightarrow x^{p^n}-x$ splits completely in $K'$, $\Rightarrow$ $f$ has a root $\beta\in K'$.
+\end{enumerate}
+\begin{exercise}
+How many monic irreducible polynomial of $\deg 9$ over $\mathbb{F}_7$? 
+\end{exercise}
+\begin{proof}
+Consider the finite extension of the field $\mathbb{F}_7$. Over the field $\mathbb{F}_{7^9}$, $x^{7^9}-x$ splits completely. So$$ x^{7^9}-x=(x^{7^3}-x)* \prod_{\deg{g}=9, \mbox{irr over }\mathbb{F}_7} g,$$ So ans$=\frac{7^9-7^3}{9}$.
+\end{proof}
+We now want to prove the quadratic reciprocity using finite field.
+\begin{proof}
+\notcomplete
+\end{proof}

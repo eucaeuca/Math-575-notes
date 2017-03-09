@@ -1,0 +1,47 @@
+\section{Class Notes 17-02-16}
+\begin{definition}
+Let $E/K$ be extension of fields. An element $\alpha\in E$ is said to be algebraic over $K$ if it's the root of some non-zero polynomial with coefficient in $K$.
+\end{definition}
+\begin{example}\mbox{}
+\begin{enumerate}
+	\item
+	$\sqrt{2}i$ is algebraic over $\Q$.
+	\item
+	$\pi$ is not algebraic over $\Q$
+\end{enumerate}
+\end{example}
+$k(\al)$ is the smallest subfield of $K$ containing $K$ and $\al$. $k[\al]$ is the smallest subring of $E$ containing $K$ and $\al$. We have
+$$
+k(\al)=\{\frac{p(\al)}{q(\al)} \mbox{ with } p(x),q(x)\in K[x], q(x)\ne0 \}
+$$
+$$
+k[\al]=\{{p(\al)}, p(x)\in K[x]\}
+$$
+\begin{theorem}
+Suppose $\al$ is algebraic over $K$, then $K(\al)=K[\al]$
+\end{theorem}
+\begin{proof}
+Let $I=\{p(x)\in K[x], p(\al)=0 \}\subset k[x]$, $I$ is an ideal in $K[\al]$. Since $K[x]$ is a PID, $I = (f(x))$. Consider the homomorphism $\phi$ from $K[x]$ to $K[\al]$ is surjective, so $\frac{K[x]}{(f(x))}$ is isomorphic to $K[\al]$. But $K[\al]\subset K(\al)$ is a subring of a field, and therefore an integral domain, so $f(x)$ is irreducible. By the claim that $\frac{K[x]}{(f(x))}$ is a field, we have $K(\al)=K[\al]$. 
+\end{proof}
+\begin{exercise}
+$\al=2^{1/3}\in\C$, write $\frac{1+\al}{1+\al^2}$ as a polynomial in \al with \Q coefficient.
+\end{exercise}
+\begin{proof}
+Just find the inverse of $1+\al^2$. \emph{Hint,} use Euclidean to find the gcd of $x^3-2$ and $x^2+1$.
+\end{proof}
+\begin{theorem}
+All algebraic numbers over a field $K$ is a field.
+\end{theorem}
+\begin{proof}\mbox{}
+\begin{enumerate}
+	\item Evidently, if $\al$ is algebraic over $K$, so is $K^{-1}$.
+	\item To prove closure under multiplication and addition. Suppose we have two algebraic number $\al$ and $\beta$ and $[k(\al):k]=m, [k(\be):k]=n$. Let $r_{ij}=\al^i\be^j$, where $0\le i\le m-1, 0\le j\le n-1$. Let $\gamma=\al+\be, N=mn$. We can then write down the following equitions.
+	\begin{align*}
+	\gamma\cdot r_1 &=c_{11} r_1 + \cdots + c_{1N} r_N\\
+	\gamma\cdot r_1 &=c_{21} r_1 + \cdots + c_{2N} r_N\\
+	\vdots & \vdots\vdots\\
+	\gamma\cdot r_N &=c_{N1} r_1 + \cdots + c_{NN} r_N\\
+	\end{align*}
+	Let $A$ be the matrix of $c_{ij}$, then $$\gamma r=Ar$$or $$\det(A-\gamma I) =0$$Therefore closed under multiplication and addition. 
+\end{enumerate} 
+\end{proof}
