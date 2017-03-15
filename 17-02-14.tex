@@ -20,49 +20,7 @@ How many monic irreducible polynomial of $\deg 9$ over $\mathbb{F}_7$?
 \begin{proof}
 Consider the finite extension of the field $\mathbb{F}_7$. Over the field $\mathbb{F}_{7^9}$, $x^{7^9}-x$ splits completely. So$$ x^{7^9}-x=(x^{7^3}-x)* \prod_{\deg{g}=9, \mbox{irr over }\mathbb{F}_7} g,$$ So ans$=\frac{7^9-7^3}{9}$.
 \end{proof}
-We now want to prove the quadratic reciprocity using finite field. i.e., we want to prove
-$$\leg{p}{q}\leg{q}{p}=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}$$
-where $p,q$ are odd primes.
+We now want to prove the quadratic reciprocity using finite field.
 \begin{proof}
-We can find $n$, such that $q^n\con{1}{p}$. Consider the multiplicative subgroup $\F_{q^n}^\times$. Say $\gamma$ is a generator of this subgroup, let $\lambda = \gamma^{\frac{q^n-1}{p}}$, then order of $\lambda$ is $p$. Let $\tau_a = \sum_{i=1}^{p-1}\leg{i}{p}\lambda^{ai}$ and denote $\tau = \tau_1$, we claim
-\begin{enumerate}
-\item
-$\tau_a=\leg{a}{p}\tau$,
-\item
-$\tau^2 = (-1)^{\frac{p-1}{2}}p$.
-\end{enumerate}
-For the first claim, assume $\gcd(p,a)=1$, let $ab\con{1}{p}$, we notice that 
-\begin{align*}
-\tau_a &= \sum_{i=1}^{p-1}\leg{i}{p}\lambda^{ai}\\
-&= \sum_{i=1}^{p-1}\leg{bi}{p}\lambda^{abi}\\
-&= \sum_{i=1}^{p-1}\leg{b}{p}\leg{i}{p}\lambda^{i}\\
-&= \leg{b}{p} \tau = \leg{a}{p} \tau
-\end{align*}
-For the second claim, we have 
-\begin{align*}
-\tau^2 &= \left(\sum_{i=1}^{p-1}\leg{i}{p}\lambda^{i} \right)\left(\sum_{i=1}^{p-1}\leg{i}{p}\lambda^{i} \right)\\
-&= \sum_{i=1}^{p-1}\sum_{j=1}^{p-1}\leg{i}{p}\leg{j}{p}\lambda^{i+j}\\
-&= \sum_{i,j}\leg{ij}{p}\lambda^{i+j}\\
-&= \sum_{i,j}\leg{i^2j}{p}\lambda^{i+ij}\\
-&= \sum_{i,j}\leg{j}{p}\lambda^{i(j+1)}\\
-&= \sum_{j=1}^{p-1} \leg{j}{p}\sum_{i=1}^{p-1}\lambda^{i(j+1)}
-\end{align*}
-But $\sum_{i=1}^{p-1}\lambda^{i(j+1)}=\left\{\begin{matrix}
-p-1, & j=-1\\ -1, & j\ne-1\end{matrix}\right.$, So \begin{align*}
-\tau^2 &=\sum_{j\ne-1}\leg{j}{p}(-1)+\leg{-1}{p}(p-1)\\
-&=\leg{-1}{p}p-\sum_{j}\leg{j}{p}\\
-&=\leg{-1}{p}p.
-\end{align*}
-Denote $p^*:=\leg{-1}{p}p$,
-\begin{align*}
-\tau=\sum_j\leg{j}{p}\lambda^j & \Rightarrow \tau^q=(\sum_j\leg{j}{p}\lambda^j)^q\\
-& \Rightarrow \tau^q = \sum_{j}\leg{j}{p}\lambda^{jq} = \tau_q = \leg{q}{p}\tau
-\end{align*}
-Thus $\leg{q}{p}=1$ iff $\tau^q=\tau$.
-\begin{align*}
-\leg{q}{p}=1 & \Leftrightarrow \tau^q=\tau \Leftrightarrow \tau\in\F_q\\
-& \Leftrightarrow p^*\mbox{ is a square in } \F_q \Leftrightarrow \leg{p^*}{q}=1
-\end{align*}
-Thus $$\leg{q}{p}\leg{p*}{q}=1$$
-or $$\leg{p}{q}\leg{q}{p}=(-1)^{\frac{p-1}{2}\frac{q-1}{2}}$$
+\notcomplete
 \end{proof}

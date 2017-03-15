@@ -1,1 +1,112 @@
-%multiplicative character
+\section{Class Notes 17-03-07}
+\begin{definition}
+A multiplicative character on $\F_p$ is a map $\chi$ from $\F_p^\times$ to the nonzero complex numbers that satisfies 
+\begin{align*}
+\chi: \F_p^\times &\rightarrow \C^\times\\
+\chi(ab) = &\chi(a)\chi(b)\quad\mbox{for all }a,b\in\F_p^\times
+\end{align*}
+\end{definition}
+\begin{example}
+Let $p=5$, Find all multiplicative characters modulo $p$.
+\end{example}
+\begin{proof}
+\begin{table}[htbp]
+\centering
+\begin{tabular}{c|cccc}
+  & 1 & 2 & $4(2^2)$ & $3(2^3)$ \\\hline
+  $\e$ & 1 & $1$ & $1$ & $1$ \\
+  $\chi_1$ & $1$ & $-1$ & $1$ & $-1$\\
+  $\chi_2$ & $1$ & $i$ & $-1$ & $-i$\\
+  $\chi_3$ & $1$ & $-i$ & $-1$ & $i$\\
+\end{tabular}
+\caption{The characters of the group $\F_5$\label{char5}}
+\end{table}
+\end{proof}
+\begin{proposition}
+Let $\chi$ be a multiplicative character and $a\in\F_p^\times.$ Then
+\begin{enumerate}
+	\item
+	$\chi(1)=1.$
+	\item
+	$\chi(a)$ is a $(p-1)_{st}$ root of unity.
+	\item
+	$\chi(a^{-1})=\chi(a)^{-1}=\overline{\chi(a)}.$
+\end{enumerate}
+\end{proposition}
+\begin{proof}\mbox{}
+\begin{enumerate}
+	\item
+	We have $\chi(1)=\chi(1^2)=(\chi(1))^2$, so $\chi(1)=0$ or $\chi(1)=1$. But $\chi(1)$ can't be zero, thus $\chi(1)=1$.
+	\item
+	$(\chi(a))^{p-1}=\chi(a^{p-1})=\chi(1)=1$.
+	\item
+	$1=\chi(aa^{-1})=\chi(a)\chi(a^{-1})$, 
+	so $\chi(a^{-1})=\chi(a)^{-1}$. Also, since $1=\abs{\chi(a)}=\chi(a)\overline{\chi(a)}$, $\overline{\chi(a)}=(\chi(a))^{-1}$.
+\end{enumerate}
+\end{proof}
+\begin{proposition}Let $\chi$ be a multiplicative character.
+\begin{enumerate}
+	\item If $\chi\ne\varepsilon$, then $\sum_t\chi(t)=0$, where the sum is over all $t\in\F_p$.
+	\item If $\chi=\varepsilon$, then $\sum_t\varepsilon(t) = p$, the sum is over all $t\in\F_p$.
+\end{enumerate} 
+\end{proposition}
+\begin{proof}\mbox{}
+\begin{enumerate}
+	\item
+	if $\chi\ne\varepsilon$, there exist some $a\in\F_p^\times$ such that $\chi(a)\ne 1$. Then $\sum_t\chi(t) =\sum_t\chi(at) = \sum_t\chi(a)\chi(t) = \chi(a)\sum_t\chi(t)$. Thus $\sum_t\chi(t)=0$.
+	\item
+	if $\chi=\e$, trivially, $\sum_t\chi(t)=p$.
+\end{enumerate}
+\end{proof}
+\begin{proposition}\mbox{}
+\begin{enumerate}
+	\item
+Let $G=\F_p$, then the multiplicative characters of $G$ form a cyclic group of order $p-1$. 
+\item
+If $a\in\F_p^\times$ and $a\ne1$, then there is a character $\chi$ such that $\chi(a)\ne1$.
+\end{enumerate}
+\end{proposition}
+\begin{definition}
+The group of the multiplicative characters of a group $G$ is denoted by $\hat{G}$.
+\end{definition}
+\begin{proof}\mbox{}
+\begin{enumerate}
+	\item
+It's easy to verify that if $\chi,\lambda$ are characters, then $\chi\lambda$ is also a character. Also, the inverse $\chi^{-1}$ defined by $\chi^{-1}:a\mapsto \chi(a)^{-1}$ is a character. So all characters form a group. 
+Let $g$ be a primitive root modulo $p$, then $\xi:=\chi(g)$ is a primitive $p-1_{st}$ root of unity (why? For if exists some a least $u<p-1, u\ne0$ such that $\xi^u = 1$, then $\chi(g^u)=1$. But then exists $v\con{p-1}{u}$ such that $\xi^v=1$, which contradicts our assumption). If there is some $n$ such that $\chi^n=\e$, then $(\chi(g))^{n}=\e(g)=1$. Then $\xi^n=1 \Rightarrow (p-1)\mid n$. But the order of $\xi$ is at most $p-1$, so the order of $\xi$ is $p-1$.
+	\item
+\notcomplete
+\end{enumerate}
+\end{proof}
+\begin{corollary}
+If $a\in\F_p^{\times}, a\ne1,$ then $\sum_{\chi\in\hat{G}}\chi(a)$=0.
+\end{corollary}
+\begin{proof}
+If $a\ne1$, then \begin{align*}
+\sum_{\chi\in\hat{G}}\chi(a) &=\sum_{\chi\in\hat{G}}(\mu\chi)(a)\\ 
+&=\mu(a)\sum_{\chi\in\hat{G}}\chi(a).
+\end{align*}
+So $\sum_{\chi\in\hat{G}}\chi(a)=0$.
+\end{proof}
+We now have the question that \underline{whether $x^n=a$ has a root in $\F_p$?}\\
+\begin{proposition}
+Let $d = \gcd(n, p-1)$, then $x^n=a$ has a root in $\F_p$ $\Leftrightarrow$ $x^d=a$ has a solution in $\F_p$ and in this case the number of roots is $d$.
+\end{proposition}
+\begin{proof}
+We have proved this result. (Using the fact that $\F_p^\times$ is a cyclic group)
+\end{proof}
+Another question is that \underline{let $n\mid(p-1)$, does $x^n = a$ has solutions in $\F_p$.}
+\begin{theorem}
+Let $n\mid p-1, a\in \F_p^\times$, then $$N(x^n=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^n=\e}\chi(a)$$.\end{theorem}
+\begin{example}\mbox{}
+\begin{enumerate}
+	\item $n=2$, $p$ is an odd prime. Then
+	$$N(x^2=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^2=\e}\chi(a)=\e(a)+\leg{a}{p}$$
+	\item $n=3$, $p$ is an odd prime. Then
+	$$N(x^3=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^3=\e}\chi(a)=\e(a)+\chi(a)+\chi^2(a)$$where $\chi$ is a character of order $3$.
+\end{enumerate}
+\end{example}
+We can extend the character $\chi:\F_p^\times\rightarrow\C^\times$ to $\chi:\F_p\rightarrow\C$ by setting $\e(0)=1$ and for $\chi\ne\e$, $\chi(0)=0$.
+\begin{proof}
+\notcomplete
+\end{proof}
