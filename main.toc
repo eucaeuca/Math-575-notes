@@ -18,4 +18,6 @@
 \contentsline {section}{\numberline {5.2}Class Notes 17-02-09}{26}
 \contentsline {section}{\numberline {5.3}Class Notes 17-02-14}{26}
 \contentsline {section}{\numberline {5.4}Class Notes 17-02-16}{27}
+\contentsline {chapter}{\numberline {6}Gauss and Jocobi Sums}{29}
+\contentsline {section}{\numberline {6.1}Class Notes 17-03-07}{29}
 \contentsfinish 
