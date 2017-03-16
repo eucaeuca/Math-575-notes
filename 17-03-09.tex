@@ -1,0 +1,128 @@
+\section{Class Notes 17-03-09}
+We now have the question that \underline{whether $x^n=a$ has a root in $\F_p$?}\\
+\begin{proposition}
+Let $d = \gcd(n, p-1)$, then $x^n=a$ has a root in $\F_p$ $\Leftrightarrow$ $x^d=a$ has a solution in $\F_p$ and in this case the number of roots is $d$.
+\end{proposition}
+\begin{proof}
+We have proved this result. (Using the fact that $\F_p^\times$ is a cyclic group)
+\end{proof}
+Another question is that \underline{let $n\mid(p-1)$, does $x^n = a$ has solutions in $\F_p$.}
+\begin{theorem}
+Let $n\mid p-1, a\in \F_p^\times$, then $$N(x^n=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^n=\e}\chi(a)$$.\end{theorem}
+\begin{example}\mbox{}
+\begin{enumerate}
+	\item $n=2$, $p$ is an odd prime. Then
+	$$N(x^2=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^2=\e}\chi(a)=\e(a)+\leg{a}{p}$$
+	\item $n=3$, $p$ is an odd prime. Then
+	$$N(x^3=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^3=\e}\chi(a)=\e(a)+\chi(a)+\chi^2(a)$$where $\chi$ is a character of order $3$.
+\end{enumerate}
+\end{example}
+We can extend the character $\chi:\F_p^\times\rightarrow\C^\times$ to $\chi:\F_p\rightarrow\C$ by setting $\e(0)=1$ and for $\chi\ne\e$, $\chi(0)=0$. So Table \ref{char5} becomes
+\begin{table}[htbp]
+\centering
+\begin{tabular}{c|ccccc}
+  & $0$ & 1 & 2 & $4(2^2)$ & $3(2^3)$ \\\hline
+  $\e$ & $1$ & 1 & $1$ & $1$ & $1$ \\
+  $\chi_1 $& $0$ & $1$ & $-1$ & $1$ & $-1$\\
+  $\chi_2$ & $0$  & $1$ & $i$ & $-1$ & $-i$\\
+  $\chi_3$ & $0$  & $1$ & $-i$ & $-1$ & $i$\\
+\end{tabular}
+\caption{The characters of the group $\F_5$\label{char5new}}
+\end{table}
+\begin{proof}
+For $a=0$, the only solution for $x^n=0$ is $x=0$. Trivially, RHS is $1$. We can assume $a\ne0$. There are two cases.
+\begin{itemize}
+	\item[\underline{case 1:}] If $a$ is not a $n_{th}$ power, then LHS is $0$. We have $$
+	\mbox{RHS} = \sum_{\mu^n=\e}\e(a).$$ We claim:\\
+	If $a$ is not $n_{th}$ power, then there exists $\chi\in\hat{G}$, $\chi^n\in\e$, such that $\chi(a)\ne1$.
+	\begin{proof}
+	$a$ is not a $n_{th}$ power is equivalent to say $a^{\frac{p-1}{n}}=1$ has no solution or $a^{\frac{p-1}{n}}\ne1$. But then there exists a character $\lambda$ such that $\lambda(a^{\frac{p-1}{n}})\ne1$ or $\lambda^{\frac{p-1}{n}}(a)\ne1$. Clearly, $\chi:=\lambda^{\frac{p-1}{n}}$ is a character such that $\chi(a)\ne1$.
+	\end{proof}
+	Using this lemma, we have \begin{align*}
+	\mbox{RHS} &= \sum_{\mu^n=\e}\mu(a)\\
+	&= \sum_{\mu^n=\e}(\chi\mu)(a)\\
+	&= \chi(a)\sum_{\mu^n=\e}\mu(a)\\
+	&\Rightarrow \sum_{\mu^n=\e}\mu(a)=0
+	\end{align*}
+	\item[\underline{case 2:}] If $a$ is a $n_{th}$ power, then LHS is $n$. \begin{align*}
+	\mbox{RHS} &=  \sum_{\chi^n=\e}\chi(a)\\
+	&=\sum_{\chi^n=\e}\chi(b^n)\\
+	&=\sum_{\chi^n=\e}\chi^n(b)=n
+	\end{align*}
+\end{itemize}
+\end{proof}
+\begin{example}
+Let $p=7,n=3, a=2$, verify the theorem.
+\end{example}
+\begin{proof}
+The first step is to write down the table of characters
+\begin{table}[htbp]
+\centering
+\begin{tabular}{c|ccccccc}
+          & $0$ & $1$  & $3$     & $2$     & $6$ & $4$ & $5$ \\\hline
+  $\e$     & $1$& $1$  & $1$     & $1$     & $1$ & $1$ & $1$\\
+  $\chi$  & $0$& $1$  & $\xi$   & $\xi^2$ & $\xi^3$ & $\xi^4$ & $\xi^5$\\
+  $\chi^2$& $0$& $1$  & $\xi^2$ & $\xi^4$ & $1$ & $\xi^2$ & $\xi^4$\\
+  $\chi^3$& $0$& $1$  & $\xi^3$ & $1$     & $\xi^3$ & $1$ & $\xi^3$\\
+  $\chi^4$& $0$& $1$  & $\xi^4$ & $\xi^2$ & $1$ & $\xi^4$ & $\xi^2$\\
+  $\chi^5$& $0$& $1$  & $\xi^5$ & $\xi^4$ & $\xi^3$ & $\xi^2$ & $\xi$\\
+\end{tabular}
+\caption{The characters of the group $\F_7$\label{char7}}
+\end{table}
+So $N(x^3=2)=\e(2)+\chi^2(2)+\chi^4(2)=1+\xi^2+\xi^4 = 0$
+\end{proof}
+\begin{definition}
+Let $\chi$ be a multiplicative character modulo $p$. Let $\xi$ be a fixed primitive $p_{th}$ root of unity. Let $a\in\F_p$, we define
+$$g_a(\chi) = \sum_{t\in \F_p}\chi(t)\xi^{at}$$ $g_a$ is called a Gauss sum on $\F_p$ belonging to the character $\chi$.
+\end{definition}
+We have the following proposition
+\begin{proposition}\mbox{}
+\begin{itemize}
+	\item
+	if $a=0,\chi=\e$, then $g_a(\chi) = \sum_{t\in\F_p}\e(t)=p$.
+	\item
+	if $a=0,\chi\ne\e$, then $g_a(\chi) = \sum_{t\in\F_p}\chi(t)=0$.
+	\item
+	if $a\ne0,\chi=\e$, then $g_a(\chi) = \sum_{t\in\F_p}\xi^{at}=0$.
+	\item
+	if $a\ne0,\chi\ne\e$, then $g_a(\chi) = \chi^{-1}(a)g(\chi)=\chi(a^{-1})g(\chi)$.
+\end{itemize}
+\end{proposition}
+\begin{proof}
+The first $3$ argument are trivial. For the last statement, we have
+\begin{align*}
+\chi(a)g_a(\chi) &= \chi(a)\sum_t\chi(t)\xi^{at}\\
+&= \sum_t\chi(at)\xi^{at}\\
+&= \sum_t\chi(t)\xi^t = g(\chi).
+\end{align*}
+So $g_a(\chi) = \chi^{-1}(a)g(\chi)=\chi(a^{-1})g(\chi).$
+\end{proof}
+\begin{theorem}
+If $\chi$ is a non-trivial character, then 
+$$\abs{g(x)}=\sqrt{p}$$
+\end{theorem}
+\begin{proof}
+We prove this theorem by evaluating $\sum_{a\in\F_p^\times} g_a(\chi)\overline{g_a(\chi)}$ twice. We have
+\begin{align*}
+\sum_{a\in\F_p^\times} g_a(\chi)\overline{g_a(\chi)} 
+&=\sum_{a\in\F_p^\times} \chi(a^{-1})g(\chi)\overline{\chi(a^{-1})g(\chi)}\\
+&=\sum_{a\in\F_p^\times} g(\chi)\overline{g(\chi)}\\
+&= (p-1)\abs{g(\chi)}^2
+\end{align*}
+Also
+\begin{align*}
+\sum_{a\in\F_p^\times} g_a(\chi)\overline{g_a(\chi)} 
+&=\sum_{a\in\F_p^\times}\left(\sum_{t\in\F_p}\chi(t)\xi^{at} \right)\left(\sum_{t\in\F_p}\chi(t)\xi^{at} \right)\\
+&=\sum_{a\in\F_p^\times}\sum_{s,t}\chi(t)\overline{\chi(s)}\xi^{a(t-s)}\\
+&= \sum_{t,s}\chi(t)\overline{\chi(s)}\sum_{a\in\F_p}\xi^{a(t-s)}
+\end{align*}
+But 
+$$\sum_{a\in\F_p}\xi^{a(t-s)}=\left\{\begin{matrix}p & \mbox{if }p=s\\0& \mbox{if }t\ne s\end{matrix}\right.$$So
+\begin{align*}
+\sum_{a\in\F_p^\times} g_a(\chi)\overline{g_a(\chi)} 
+&= \sum_{t,s}\chi(t)\overline{\chi(s)}\sum_{a\in\F_p}\xi^{a(t-s)}\\
+&= \sum_t \chi(t)\overline{\chi(t)}p\\
+&= (p-1)p
+\end{align*}
+Thus $(p-1)p=(p-1)\abs{g(\chi)}^2\Rightarrow \abs{g(\chi)}=\sqrt{p}$.
+\end{proof}

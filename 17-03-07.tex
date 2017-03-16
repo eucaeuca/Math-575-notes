@@ -88,25 +88,3 @@ If $a\ne1$, then \begin{align*}
 \end{align*}
 So $\sum_{\chi\in\hat{G}}\chi(a)=0$.
 \end{proof}
-We now have the question that \underline{whether $x^n=a$ has a root in $\F_p$?}\\
-\begin{proposition}
-Let $d = \gcd(n, p-1)$, then $x^n=a$ has a root in $\F_p$ $\Leftrightarrow$ $x^d=a$ has a solution in $\F_p$ and in this case the number of roots is $d$.
-\end{proposition}
-\begin{proof}
-We have proved this result. (Using the fact that $\F_p^\times$ is a cyclic group)
-\end{proof}
-Another question is that \underline{let $n\mid(p-1)$, does $x^n = a$ has solutions in $\F_p$.}
-\begin{theorem}
-Let $n\mid p-1, a\in \F_p^\times$, then $$N(x^n=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^n=\e}\chi(a)$$.\end{theorem}
-\begin{example}\mbox{}
-\begin{enumerate}
-	\item $n=2$, $p$ is an odd prime. Then
-	$$N(x^2=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^2=\e}\chi(a)=\e(a)+\leg{a}{p}$$
-	\item $n=3$, $p$ is an odd prime. Then
-	$$N(x^3=a\mbox{ in }\F_p^\times)=\sum_{\chi\in\hat{G},\chi^3=\e}\chi(a)=\e(a)+\chi(a)+\chi^2(a)$$where $\chi$ is a character of order $3$.
-\end{enumerate}
-\end{example}
-We can extend the character $\chi:\F_p^\times\rightarrow\C^\times$ to $\chi:\F_p\rightarrow\C$ by setting $\e(0)=1$ and for $\chi\ne\e$, $\chi(0)=0$.
-\begin{proof}
-\notcomplete
-\end{proof}
